@@ -2,11 +2,11 @@
 
 class mariadb {
   package {'mariadb-server':
-  name=>  ['mariadb-server','mariadb'],
+  name  =>  ["mariadb-server","mariadb"],
   ensure => present,
   }
   service {"mariadb":
   ensure  =>  running,
-  enable  =>  true,
+  enable  =>  true,s
   }
 }

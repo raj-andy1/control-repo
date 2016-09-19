@@ -36,4 +36,6 @@ node 'centos7a' {
   notify { "this is ${fqdn}":}
   include apache
   include manage_users
+  include mariadb
+  include php
 }

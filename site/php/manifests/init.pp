@@ -1,8 +1,8 @@
 # /etc/puppetlabs/code/environments/production/site/php/manifests/init.pp
 
 class php{
-  package {'php':
-  name  =>  ['php','php-mysql'],
+  $php_package_name = ['php','php-mysql']
+  package {$php_package_name:
   ensure  => present
   }
 }

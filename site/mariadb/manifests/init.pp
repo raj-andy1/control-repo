@@ -7,6 +7,6 @@ class mariadb {
   }
   service {"mariadb":
   ensure  =>  running,
-  enable  =>  true,s
+  enable  =>  true,
   }
 }

@@ -18,7 +18,7 @@ class apache {
   file { "${conf_dir}/info.php":
     ensure  =>  file,
     mode  =>  '0755',
-    source  =>  'puppet:///site/apache/info.php',
+    source  =>  'puppet:///modules/apache/info.php',
     require =>  Package['httpd'],
     notify  =>  Service['httpd'],
   }

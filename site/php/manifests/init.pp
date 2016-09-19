@@ -3,6 +3,6 @@
 class php{
   package {'php':
   name  =>  ['php','php-mysql'],
-  ensure  = > present
+  ensure  => present
   }
 }

@@ -38,4 +38,5 @@ node 'centos7a' {
   include manage_users
   include mariadb
   include php
+  include mariadb::server
 }

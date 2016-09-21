@@ -6,7 +6,7 @@ class mariadb::server{
 
   file { "/var/lib/mysql/my.cnf":
     owner => "mysql", group => "mysql",
-    source => "puppet:///mysql/my.cnf",
+    source => "puppet:///modules/mariadb/my.cnf",
     notify => Service["mariadb"],
     require => Package["mariadb"],
   }

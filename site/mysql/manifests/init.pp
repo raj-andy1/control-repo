@@ -5,8 +5,9 @@ class mysql {
   package { $mysql_package_name:
   ensure => present,
   }
-  service { $mysql_package_name:
+  service { "mysqld":
   ensure  =>  running,
   enable  =>  true,
+  require =>  Package["${mysql_package_name}"],
   }
 }

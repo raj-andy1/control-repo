@@ -17,9 +17,9 @@ class mariadb::server{
   }
 
   exec { "set-mysql-password":
-    unless => "mysqladmin -uroot -p\"${mysql_password}\" status",
+    unless => "mysql -u root -p\"${mysql_password}\" status",
     path => ["/bin", "/usr/bin"],
-    command => "mysqladmin -uroot password \"${mysql_password}"",
+    command => "mysqladmin -uroot password \"${mysql_password}"\",
     require => Service["mariadb"],
   }
 }

@@ -32,11 +32,10 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'centos7a' {
+node /centos7./ {
   notify { "this is ${fqdn}":}
   include apache
   include manage_users
-  include mariadb
+  include mysql
   include php
-  include mariadb::server
 }

@@ -16,4 +16,6 @@ forge "http://forge.puppetlabs.com"
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
 #  :branch => 'docs_experiment'
 
-mod 'puppetlabs/mysql', :latest
+mod 'puppetlabs/mysql'
+mod 'puppetlabs/stdlib'
+mod 'puppet/staging'

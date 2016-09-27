@@ -19,3 +19,5 @@ forge "http://forge.puppetlabs.com"
 mod 'puppetlabs/mysql'
 mod 'puppetlabs/stdlib'
 mod 'puppet/staging'
+mod 'puppetlabs/concat'
+mod 'hunner/wordpress'

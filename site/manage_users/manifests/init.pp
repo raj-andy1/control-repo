@@ -11,4 +11,7 @@ class manage_users {
   groups => wordpress,
   password => '$1$tPyS005D$BO2bEaAK/ufrBYJqcuzel0'
  }
+ group {"wordpress":
+  ensure => present,
+ }
 }

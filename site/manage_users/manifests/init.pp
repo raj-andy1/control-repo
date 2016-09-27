@@ -6,4 +6,9 @@ class manage_users {
   groups  =>  wheel,
   password  =>  '$1$D6CTx5Rl$F5LoY3.IXfTQX2cr27gIT1',
   }
+  user {"wordpress":
+  ensure  => present,
+  groups => wordpress,
+  password => '$1$tPyS005D$BO2bEaAK/ufrBYJqcuzel0'
+ }
 }

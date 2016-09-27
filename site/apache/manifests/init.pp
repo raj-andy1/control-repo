@@ -8,6 +8,9 @@ class apache {
   ensure  =>  present,
   }
 
+  package {"wget":
+  ensure  => present,
+}
   service {"httpd":
   ensure  =>  running,
   enable  =>  true,

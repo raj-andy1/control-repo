@@ -4,10 +4,12 @@ class profile::lampstack {
   notify { "this is ${fqdn}":}
   include manage_users
   include mysql::server
-  include php
+  include apache
+  include apache::mod::php
 
-  class { 'apache':
-  docroot => '/var/www',
+  apache::vhost { $::fqdn:
+    port => '80',
+    docroot => '/opt/wordpress',
   }
 
   class { 'wordpress':
@@ -15,7 +17,6 @@ class profile::lampstack {
   wp_group  => 'wordpress',
   db_user  => 'wordpress',
   db_password  => '$1$tPyS005D$BO2bEaAK/ufrBYJqcuzel0',
-  install_dir =>  '/var/www/wordpress',
   create_db  => true,
   create_db_user  => true,
   }

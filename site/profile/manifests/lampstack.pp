@@ -10,7 +10,7 @@ class profile::lampstack {
 
   apache::vhost { $::fqdn:
     port => '80',
-    priority  => '00'
+    priority  => '00',
     docroot => '/opt/wordpress',
   }
 }

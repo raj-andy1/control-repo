@@ -6,18 +6,11 @@ class profile::lampstack {
   include mysql::server
   include apache
   include apache::mod::php
+  include wordpress
 
   apache::vhost { $::fqdn:
     port => '80',
+    priority  => '00'
     docroot => '/opt/wordpress',
-  }
-
-  class { 'wordpress':
-  wp_owner  => 'wordpress',
-  wp_group  => 'wordpress',
-  db_user  => 'wordpress',
-  db_password  => '$1$tPyS005D$BO2bEaAK/ufrBYJqcuzel0',
-  create_db  => true,
-  create_db_user  => true,
   }
 }

@@ -6,7 +6,9 @@ class profile::lampstack {
   include mysql::server
   include php
 
-  class { 'apache': }
+  class { 'apache':
+  docroot => '/var/www',
+  }
 
   class { 'wordpress':
   wp_owner  => 'wordpress',

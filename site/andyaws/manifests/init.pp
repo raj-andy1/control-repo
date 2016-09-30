@@ -9,7 +9,7 @@ class andyaws {
       name  => 'andy.rajagopalan',
       department  => 'tse',
       project => 'internal-practice',
-      created by => 'andyr@puppet.com',
+      created_by => 'andyr@puppet.com',
     }
   }
 }

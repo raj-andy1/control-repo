@@ -1,4 +1,4 @@
-class andy-aws {
+class andyaws {
   ec2_instance { 'test-andyr':
   ensure  =>  present,
   image_id  =>  'ami-775e4f16',

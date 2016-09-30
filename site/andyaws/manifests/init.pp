@@ -1,3 +1,4 @@
+#change directory
 class andyaws {
   ec2_instance { 'test-andyr':
   ensure  =>  present,

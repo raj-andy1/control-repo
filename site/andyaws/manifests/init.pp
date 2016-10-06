@@ -5,7 +5,6 @@ class andyaws {
   image_id  =>  'ami-775e4f16',
   instance_type =>  'm3.medium',
   key_name  =>  'andy.rajagopalan',
-  vpc =>  'tse-vpc',
   iam_instance_profile_name =>  'puppetlabs_aws_provisioner',
   tags  =>  {
       name  => 'andy.rajagopalan',

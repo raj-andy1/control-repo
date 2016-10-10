@@ -2,7 +2,6 @@
 class andyaws {
   ec2_instance { 'andyr-puppetmaster':
   ensure  =>  stopped,
-  name  =>  'andyr-puppetmaster'
   image_id  =>  'ami-775e4f16',
     }
   ec2_instance { 'andyr-puppetmaster01':

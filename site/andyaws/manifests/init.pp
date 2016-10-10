@@ -15,4 +15,5 @@ class andyaws {
         project => 'internal-practice',
         created_by => 'andyr@puppet.com',
   }
+ }
 }

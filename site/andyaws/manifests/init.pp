@@ -1,7 +1,7 @@
 # /etc/puppetlabs/code/environments/production/site/andyaws/manifests/init.pp
 class andyaws {
   ec2_instance { 'andyr-puppetmaster':
-  ensure  =>  stopped,
+  ensure  =>  absent,
   image_id  =>  'ami-775e4f16',
     }
   ec2_instance { 'andyr-puppetmaster01':

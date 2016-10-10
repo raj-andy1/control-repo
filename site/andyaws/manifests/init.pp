@@ -2,6 +2,7 @@
 class andyaws {
   ec2_instance { 'andyr-puppetmaster':
   ensure  =>  stopped,
+  instance_id =>  'i-e242a63e',
     }
   ec2_instance { 'andyr-puppetmaster01':
     ensure  =>  present,

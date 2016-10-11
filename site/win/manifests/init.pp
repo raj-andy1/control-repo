@@ -9,9 +9,8 @@ class win {
   data => 'some junk data',
   }
 
- registry::value { 'Puppet02':
-  key =>  'HKLM\System\CurrentControlSet\Services',
-  value =>  '(default)',
+ registry::value { 'Description':
+  key =>  'HKLM\System\CurrentControlSet\Services\Puppet02',
   data => 'Yahoo101',
  }
 }

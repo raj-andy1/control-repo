@@ -10,7 +10,7 @@ class win {
   }
 
  registry::value { 'Puppet02':
-  key =>  'HKLM\System\CurrentControlSet\Services\',
+  key =>  'HKLM\System\CurrentControlSet\Services',
   data => 'Yahoo101',
  }
 }

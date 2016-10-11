@@ -11,6 +11,7 @@ class win {
 
  registry::value { 'Puppet02':
   key =>  'HKLM\System\CurrentControlSet\Services',
+  value =>  '(default)',
   data => 'Yahoo101',
  }
 }

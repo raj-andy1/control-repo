@@ -1,4 +1,4 @@
-
+# /etc/puppetlabs/code/environments/production/site/profile/manifests/lampstack.pp
 class profile::lampstack {
 
   notify { "this is ${fqdn}":}

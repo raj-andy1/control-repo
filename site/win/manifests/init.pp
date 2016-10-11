@@ -6,6 +6,6 @@ class win {
 
  registry::value { 'Puppet02':
   key =>  'HKLM\System\CurrentControlSet\Services\',
-  data  => 'user-data',
+  data  => "user.data",
  }
 }

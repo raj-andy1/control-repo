@@ -5,6 +5,7 @@ class andyaws {
   image_id  =>  'ami-775e4f16',
     }
   ec2_instance { 'andyr-puppetmaster01':
+    name  =>  'andyr-puppetmastermaster',
     ensure  =>  present,
     image_id  =>  'ami-775e4f16',
     instance_type =>  'm3.large',

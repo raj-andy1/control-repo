@@ -4,5 +4,5 @@ class profile::xomwin {
 
   notify { "this is ${fqdn}":}
   include win
-  include manage_users::winusers
+  include win::winusers
 }

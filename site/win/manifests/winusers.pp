@@ -7,7 +7,7 @@ class win::winusers{
 
   user { ['testuser01','testuser02']:
     ensure  =>  present,
-    group =>  'testgroup01',
+    groups =>  'testgroup01',
     password  => 'Puppetlabs01'
   }
 }

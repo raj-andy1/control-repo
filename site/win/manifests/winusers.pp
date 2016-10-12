@@ -1,6 +1,6 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/winusers.pp
 
-class winusers{
+class win::winusers{
   group { 'testgroup01':
     ensure => present,
   }

@@ -6,4 +6,5 @@ class profile::xomwin {
   include win
   include win::winusers
   include win::winperm
+  include win::wininstall
 }

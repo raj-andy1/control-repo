@@ -5,8 +5,8 @@ class win::wininstall {
     provider  =>  'chocolatey',
   }
 
-  package {'securecrt':
-    ensure => '7.3.7',
+  package {'vlc':
+    ensure => '2.2.0',
     provider  =>  'chocolatey',
   }
 }

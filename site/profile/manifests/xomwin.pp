@@ -4,7 +4,7 @@ class profile::xomwin {
 
   notify { "this is ${fqdn}":}
   include chocolatey
-  include win
+  include win::winreg
   include win::winusers
   include win::winperm
   include win::wininstall

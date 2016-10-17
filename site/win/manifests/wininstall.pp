@@ -6,7 +6,7 @@ class win::wininstall {
   }
 
   package {'vlc':
-    ensure => '2.2.0',
+    ensure => ['2.2.0',held],
     provider  =>  'chocolatey',
   }
 }

@@ -8,5 +8,5 @@ class profile::xomwin {
   include win::winusers
   include win::winperm
   include win::wininstall
-  include win:winfeat
+  include win::winfeat
 }

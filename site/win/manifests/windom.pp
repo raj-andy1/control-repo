@@ -4,6 +4,7 @@ class win::windom{
     ensure  =>  present,
     installsubfeatures  => true,
     installmanagementtools  =>  true,
+    restart =>  true,
 
   }
 }

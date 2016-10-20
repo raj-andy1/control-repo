@@ -6,5 +6,4 @@ class win:windj { 'domain_membership':
   password  =>  'Puppetlabs01',
   join_options  =>  '3',
 
-
 }

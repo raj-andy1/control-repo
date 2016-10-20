@@ -1,6 +1,6 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/windom.pp
 class win::windom{
-  windowsfeature { 'Domain Controller':
+  windowsfeature { 'DomainController':
     ensure  =>  present,
     installsubfeatures  => true,
     installmanagementtools  =>  true,

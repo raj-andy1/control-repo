@@ -1,4 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/winusers.pp
+# Sample code that adds local users
 
 class win::winusers{
   group { 'testgroup01':

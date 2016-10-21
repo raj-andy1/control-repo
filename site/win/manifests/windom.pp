@@ -1,4 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/windom.pp
+# Sample code that promotes a computer running Win2012 Server to a Domain Controller
 class win::windom {
   class { 'windows_ad':
    install                => present,

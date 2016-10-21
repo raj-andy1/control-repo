@@ -1,4 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/winperm.pp
+# Sample code to set NTFS permissions on test objects
 class win::winperm {
   acl { 'C:\Users\Administrator\Pictures\collage.png':
   target  =>  'C:\Users\Administrator\Pictures\collage.png',

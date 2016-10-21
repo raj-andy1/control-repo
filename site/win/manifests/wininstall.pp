@@ -1,4 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/winusers.pp
+# Sample code that installs software from Chocolatey
 class win::wininstall {
   package {'notepadplusplus':
     ensure  =>  latest,

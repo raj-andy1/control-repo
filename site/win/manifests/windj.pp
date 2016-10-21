@@ -1,4 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/windj.pp
+# Sample code that allows a computer to join a domain
 
 class win::windj {
   class {'domain_membership':

@@ -1,6 +1,6 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/windj.pp
 
-class win:windj {
+class win::windj {
   class {'domain_membership':
   domain  =>  'andyr.corp',
   username  =>  'Administrator',

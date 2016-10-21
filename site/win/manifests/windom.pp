@@ -1,5 +1,6 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/windom.pp
-class win::windom { 'windows_ad':
+class win::windom {
+  class { 'windows_ad':
    install                => present,
    installmanagementtools => true,
    restart                => true,

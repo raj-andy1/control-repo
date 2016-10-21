@@ -9,4 +9,5 @@ class profile::xomwin {
   include win::winperm
   include win::wininstall
   include win::winfeat
+  include win::windj
 }

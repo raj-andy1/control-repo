@@ -2,7 +2,7 @@
 
 class arntp {
   class  {'ntp':
-  $ntpservernm = $::os["name"]? {
+  $ntpservernm = $::os["name"] ? {
     'Redhat'  =>  'nist-time-server.eoni.com',
     'windows' =>  'nist1-sj.witime.net'
       }

@@ -7,6 +7,6 @@ class arntp {
       }
 
   class { 'ntp':
-    servers =>  $ntpservernm,
+    servers =>  [ $ntpservernm ],
       }
   }

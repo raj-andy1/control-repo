@@ -2,7 +2,7 @@
 
 class testusers {
   $usernm = 'user01', 'user02'
-  $groupnm  = => 'group01'
+  $groupnm  = 'group01'
   user { $usernm:
     ensure  => present,
     groups  => $groupnm,
@@ -12,6 +12,6 @@ class testusers {
 
   group { $groupnm:
     ensure  =>  present,
-      
+
     }
 }

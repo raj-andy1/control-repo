@@ -7,7 +7,7 @@ class testusers {
     ensure  => present,
     groups  => $groupnm,
     comment =>  'Test users'
-    home  =>  '/home/{$usernm}',
+    home  =>  "/home/{$usernm}",
     }
 
   group { $groupnm:

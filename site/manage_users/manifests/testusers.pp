@@ -1,6 +1,6 @@
 # /etc/puppetlabs/code/environments/production/site/manage_users/manifests/testusers.pp
 
-class testusers {
+class manage_users::testusers {
   $usernm = ['user01', 'user02']
   $groupnm  = 'group01'
   user { $usernm:

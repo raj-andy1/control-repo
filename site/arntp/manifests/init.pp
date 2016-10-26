@@ -3,7 +3,7 @@
 class arntp {
   case $::operatingsystem {
     'Redhat','centos' : { $ntpservernm = ["nist-time-server.eoni.com"]}
-    'windows': { $ntpservernm = ["nist1-sj.witime.net"] }
+    'debian': { $ntpservernm = ["nist1-sj.witime.net"] }
       }
 
   class { 'ntp':

@@ -3,9 +3,9 @@
 
 class win::windj {
   class {'domain_membership':
-  domain  =>  'andyr.corp',
-  username  =>  'Administrator',
-  password  =>  'Puppetlabs01',
-  join_options  =>  '3',
+    domain  =>  'andyr.corp',
+    username  =>  'Administrator',
+    password  =>  'Puppetlabs01',
+    join_options  =>  '3',
   }
 }

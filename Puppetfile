@@ -32,3 +32,7 @@ mod 'jriviere/windows_ad'
 mod 'trlinkin-domain_membership'
 mod 'puppetlabs/reboot'
 mod 'puppetlabs-ntp', '4.2.0'
+
+
+mod 'xom-windows-poc'
+  :git  => https://github.com/puppetlabs/xom-windows-poc

@@ -2,6 +2,7 @@
 
 class profile::linnode {
   include arntp
+  include arapache
   include manage_users::testusers
 
 }

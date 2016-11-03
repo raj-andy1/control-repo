@@ -3,7 +3,7 @@
 class profile::linnode {
   include arntp
   include arapache
-  include aropenssh
+  #include aropenssh
   include manage_users::testusers
 
 }

@@ -12,10 +12,10 @@ class arapache {
   require  =>  Package['httpd'],
   }
 
-  file { '/var/www/html/info.php':
+  file { '/var/www/html/index.html':
     ensure  =>  file,
     mode  =>  '0755',
-    source  =>  'puppet:///modules/arapache/info.php',
+    source  =>  'puppet:///modules/arapache/index.html',
     require =>  Package['httpd'],
     notify  =>  Service['httpd'],
   }

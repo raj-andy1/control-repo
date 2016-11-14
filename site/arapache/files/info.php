@@ -1,3 +1,4 @@
 // sample php file
 
-<?php phpinfo(); ?>
+<?php
+echo gethostname();?>

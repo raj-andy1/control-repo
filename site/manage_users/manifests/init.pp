@@ -15,6 +15,5 @@ class manage_users {
     }
   group {'wordpress':
     ensure  => present,
-    comment =>  'This is a test group for managing wordpress instances',
   }
 }

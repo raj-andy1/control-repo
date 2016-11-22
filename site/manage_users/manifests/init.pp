@@ -1,4 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/manage_users/manifests/init.pp
+# Sample code to add 2 users and 1 group for both CentOs and Windows boxes
 
 class manage_users {
   user {'cmsuser':

@@ -26,7 +26,7 @@ File { backup => false }
 # specified in the console for that node.
 
 node default {
-  notify { "this is a default node": }
+#  notify { "this is a default node": }
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }

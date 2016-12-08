@@ -2,13 +2,16 @@
 # Sample code that adds local users
 
 class win::winusers{
-  group { 'testgroup01':
+  $groupname =
+  $username =
+
+  group { $groupname:
     ensure => present,
   }
 
-  user { ['testuser01','testuser02']:
-    ensure  =>  present,
-    groups =>  'testgroup01',
-    password  => 'Puppetlabs01'
+  user { $username:
+    ensure   =>  present,
+    groups   =>  'testgroup01',
+    password => 'Puppetlabs01'
   }
 }

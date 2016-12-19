@@ -7,6 +7,7 @@ class aropenssh {
 
   service { 'sshd':
     ensure => running,
+    enable => true,
   }
 
   file { '/etc/ssh/sshd_config':

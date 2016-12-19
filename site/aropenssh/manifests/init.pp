@@ -16,5 +16,5 @@ class aropenssh {
     mode   => '0600',
     source =>  'puppet:///modules/aropenssh/sshd_config',
   }
-  Package ['openssh-server'] -> File ['/etc/ssh/sshd_config'] ~> Service['sshd']
+  Package['openssh-server'] -> File['/etc/ssh/sshd_config'] ~> Service['sshd']
 }

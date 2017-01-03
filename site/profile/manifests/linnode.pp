@@ -2,10 +2,10 @@
 # Setup sample linux node for demo purpose
 
 class profile::linnode {
-  #include arntp
+  include arntp
   #include arapache
   include arinifile
-  include aropenssh
-  #include manage_users::testusers
+  #include aropenssh
+  include manage_users::testusers
 
 }

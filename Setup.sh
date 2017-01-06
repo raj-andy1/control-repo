@@ -9,4 +9,4 @@ master_name=andyr-demomaster
 agent_url="https://"$master_name":8140/packages/current/install.bash"
 echo $master_ip $master_name.localdomain  $master_name >> /etc/hosts
 echo $(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)  $host_name  >> /etc/hosts
-curl -k $agent_url | bash -s extension_requests:pp_role=demo-webserver pp_created_by=AndyR pp_department=TSE
+curl -k $agent_url | bash -s extension_requests:pp_role=demo-webserver extension_requests:pp_created_by=AndyR extension_requests:pp_department=TSE

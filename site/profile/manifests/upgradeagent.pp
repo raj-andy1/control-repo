@@ -3,6 +3,8 @@
 
 class profile::upgradeagent {
 
-include ::puppet_agent
+class {'::puppet_agent':
+    package_version => latest,
+  }
 
 }

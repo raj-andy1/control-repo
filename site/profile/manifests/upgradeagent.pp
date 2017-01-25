@@ -4,7 +4,7 @@
 class profile::upgradeagent {
 
 class {'::puppet_agent':
-    package_version => latest,
+    package_version => '1.8.2',
   }
 
 }

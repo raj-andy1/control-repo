@@ -2,5 +2,6 @@
 # Sample profile for preparing Windows nodes
 
 class profile::winnode {
+  include chocolatey
   include win::winprep
 }

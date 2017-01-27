@@ -2,5 +2,5 @@
 # Sample profile for preparing Windows nodes
 
 class profile::winnode {
-  include winprep
+  include win::winprep
 }

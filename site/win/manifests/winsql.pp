@@ -4,7 +4,7 @@
 class win::winsql {
 
   sqlserver_instance{'ARSQLServer':
-    features              =>  ['sql'],
+    features              =>  ['SQL'],
     source                =>  'C:\Users\Administrator\Downloads',
     sql_sysadmin_accounts =>  ['mysql']
   }

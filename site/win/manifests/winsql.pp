@@ -8,6 +8,12 @@ class win::winsql {
     source                =>  'C:\Users\Administrator\Downloads',
     sql_sysadmin_accounts =>  ['mysql']
   }
+
+  sqlserver::config {'ARSQLServer':
+    admin_user =>  'andyr',
+    admin_pass =>  'MyP@ssword',
+  }
+
   sqlserver::database { 'miniandydb':
     instance  =>  'ARSQLServer',
   }

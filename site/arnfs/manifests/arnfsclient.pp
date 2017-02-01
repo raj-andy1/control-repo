@@ -9,6 +9,6 @@ class arnfs::arnfsclient {
     client_enabled => true,
     }
 
-  Nfs::Client::Mount <<|server == $nfsservernm|>> {
+  Nfs::Client::Mount <<||>> {
     }
   }

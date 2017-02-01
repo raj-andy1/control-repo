@@ -2,5 +2,5 @@
 # Sample code to install MS SQL Server and setup a sample db
 
 class profile::windb {
-  include win::winsql
+  include winsql::armount
 }

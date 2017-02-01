@@ -2,5 +2,5 @@
 # Demo for samsung
 
 class profile::samsungdemo {
-  include samsung
+  #include samsung
 }

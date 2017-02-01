@@ -22,17 +22,17 @@ class samsung {
 
   package { 'hdf5-1.8.12-1.with.szip.encoder.el6.x86_64.rpm':
     ensure => present,
-    source =>  'https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.12/bin/RPMS/hdf5-1.8.12-1.with.szip.encoder.el6.x86_64.rpm'
+    name   =>  'https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.12/bin/RPMS/hdf5-1.8.12-1.with.szip.encoder.el6.x86_64.rpm'
   }
 
   package { 'hdf5-openmpi-1.8.5.patch1-7.el6.x86_64.rpm':
     ensure => present,
-    source =>  'ftp://fr2.rpmfind.net/linux/epel/6/x86_64/hdf5-openmpi-devel-1.8.5.patch1-10.el6.x86_64.rpm'
+    name   =>  'ftp://fr2.rpmfind.net/linux/epel/6/x86_64/hdf5-openmpi-devel-1.8.5.patch1-10.el6.x86_64.rpm'
   }
 
   package { 'meld-1.4.0-1.el6.rf.noarch.rpm':
     ensure => present,
-    source =>  'ftp://ftp.univie.ac.at/systems/linux/dag/redhat/el6/en/i386/dag/RPMS/meld-1.4.0-1.el6.rf.noarch.rpm'
+    name   =>  'ftp://ftp.univie.ac.at/systems/linux/dag/redhat/el6/en/i386/dag/RPMS/meld-1.4.0-1.el6.rf.noarch.rpm'
   }
 
   package { 'valgrind.i686':

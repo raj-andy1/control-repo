@@ -3,16 +3,12 @@
 
 
 class arnfs::nfsclient {
-  $nfsservernm = 192.168.0.55
+  $nfsservernm = '192.168.0.55'
 
   class {'::nfs':
     client_enabled => true,
+    }
 
-  }
   Nfs::Client::Mount <<|server == $nfsservernm|>> {
-    mount =>
+    }
   }
-
-
-  }
-}

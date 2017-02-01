@@ -55,7 +55,7 @@ file { '/project/PRJ':
 }
 
 mount { '/mnt':
-  ensure  =>  'umounted',
+  ensure  =>  'unmounted',
 
 }
 

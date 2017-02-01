@@ -1,20 +1,15 @@
 # /etc/puppetlabs/code/environments/production/site/arnfs/manifests/init.pp
 
 class arnfs {
-$servicenm  = ['rpcbind','nfs-server','nfs-lock','nfs-idmap']
+  file {'var/nfsshare':
+    ensure => directory,
+    mode => '777',
 
-  package { 'nfs-utils':
-    ensure => present,
   }
-
-  file {'/var/nfsshare':
-    ensure =>  directory,
-    mode   =>  '0777',
-  }
-
-  service { $servicenm:
-    ensure => running,
-    enable => true,
-  }
+  node server {
+   include nfs::server
+   nfs::server::export{ '/var/nfsshare':
+     ensure  => 'mounted',
+     clients => '192.168.0.0/16(rw,insecure,async,no_root_squash) localhost(rw)
 
 }

@@ -3,5 +3,5 @@
 
 class profile::samsungdemo {
   include samsung
-  include arnfs::arnfsclient
+
 }

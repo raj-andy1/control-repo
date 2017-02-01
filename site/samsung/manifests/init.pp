@@ -57,7 +57,7 @@ file { '/project/PRJ':
   target =>  '/PRJ',
 }
 
-mount { '/mnt':
+mount { '/var/nfsshare':
   ensure =>  'unmounted',
   fstype =>  ext4,
 

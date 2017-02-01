@@ -6,7 +6,10 @@ class arnfs {
     mode   => '0777',
   }
 
-  include nfs::server
+  class { '::nfs':
+    server_enabled  => true
+
+  }
     nfs::server::export{ '/var/nfsshare':
       ensure  => 'mounted',
       clients => '192.168.0.0/16(rw,insecure,async,no_root_squash) localhost(rw)',

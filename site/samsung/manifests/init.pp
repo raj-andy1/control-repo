@@ -2,7 +2,7 @@
 # Sample code to demonstrate Puppet for samsung
 
 class samsung {
-  $ntpservernm = '105.128.81.1'
+  $ntpservernm = ['105.128.81.1']
   $servicenm = ['NetworkManager','bmc-watchdog','ipmi','rhnsd','abrtd','rhsmcertd',
   'bluetooth','libvirt-guests','lldpad','ip6tables','cpuspeed','tog-pegasus','fcoe','fcoe-target']
   $resservicenm = ['nslcd', 'nscd', 'autofs']

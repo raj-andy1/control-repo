@@ -9,7 +9,6 @@ class arnfs::arnfsclient {
     client_enabled => true,
     }
 
-  Nfs::Client::Mount <<| server == $nfsservernm |>> {
-    ensure  => 'mounted',
+  Nfs::Client::Mount <<| |>> {
     }
   }

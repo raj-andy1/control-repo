@@ -1,7 +1,7 @@
 # /etc/puppetlabs/code/environments/production/site/arnfs/manifests/init.pp
 
 class arnfs {
-  file {'var/nfsshare':
+  file {'/var/nfsshare':
     ensure => directory,
     mode   => '0777',
 

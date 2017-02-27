@@ -10,7 +10,7 @@ class sutterh::uc3 (
 )
 {
   dsc_xcomputer { 'JoinDomain':
-    dsc_domain     => $::hostname,
+    dsc_name       => $::hostname,
     dsc_domainname =>  $domainnm,
     dsc_credential => {
       user     =>  $domainusernm,

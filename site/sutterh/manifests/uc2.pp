@@ -10,7 +10,7 @@ class sutterh::uc2 {
   }
 
   group { $groupnm:
-    ensure => present,
-    member => $usernm,
+    ensure  => present,
+    members => $usernm,
   }
 }

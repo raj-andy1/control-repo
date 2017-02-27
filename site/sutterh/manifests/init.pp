@@ -2,5 +2,5 @@
 # Sample code to demonstrate Puppet for Sutter Health
 
 class sutterh {
-  include chocolatey
+
 }

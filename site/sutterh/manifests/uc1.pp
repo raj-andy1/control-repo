@@ -14,7 +14,7 @@ class sutterh::uc1 {
     data   => 'some junk data',
   }
 
-# updating an existing registry key (disbabling the windows shutdown event tracker on non production systems)
+# combining above operations(disbabling the windows shutdown event tracker on non production systems)
   registry::value { 'ShutdownReasonOn':
     key  => 'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Reliability',
     type => 'dword',

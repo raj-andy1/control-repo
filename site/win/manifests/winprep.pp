@@ -13,5 +13,6 @@ class win::winprep {
     dsc_addressfamily  => 'IPv4',
     dsc_address        => '192.168.0.12',
     dsc_interfacealias => 'Ethernet',
+    require            => Package['powershell']
   }
 }

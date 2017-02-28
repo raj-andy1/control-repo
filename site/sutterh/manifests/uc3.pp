@@ -28,5 +28,6 @@ class sutterh::uc3 (
       user     =>  $domainusernm,
       password =>  $domainpasswd },
     dsc_joinou     => $ounm,
+    require        =>  Dsc_xdnsserveraddress['add domain'],
   }
 }

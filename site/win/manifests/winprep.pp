@@ -7,4 +7,9 @@ class win::winprep {
     ensure   => latest,
     provider => 'chocolatey',
   }
+
+  reboot { 'after':
+    message   => 'DSC has requested a reboot',
+    subscribe => Package['powershell'],
+
 }

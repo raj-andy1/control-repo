@@ -4,7 +4,7 @@
 class sutterh::uc4 {
   dsc_windowsfeature { 'Web Server':
   ensure   =>  present,
-  dsc_name => $::hostname,
+  dsc_name => 'Web Server',
 
   }
 }

@@ -11,7 +11,7 @@ class win::winprep {
   {
     reboot { 'after':
       message   => 'DSC has requested a reboot',
-      subscripe =>  Package['powershell'],
+      Subscribe => Package['powershell'],
     }
 
   dsc_xdnsserveraddress { 'add domain':

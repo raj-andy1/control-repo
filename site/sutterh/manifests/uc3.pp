@@ -14,6 +14,14 @@ class sutterh::uc3 (
     when    => pending,
   }
 
+  dsc_xdnsserveraddress { 'add domain':
+    ensure             => present,
+    dsc_addressfamily  => 'IPv4',
+    dsc_address        => '192.168.0.12',
+    dsc_interfacealias => 'Ethernet',
+    require            => Package['powershell']
+  }
+
   dsc_xcomputer { 'JoinDomain':
     dsc_name       => $::hostname,
     dsc_domainname =>  $domainnm,

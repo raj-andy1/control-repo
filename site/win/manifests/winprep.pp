@@ -11,5 +11,5 @@ class win::winprep {
   reboot { 'after':
     message   => 'DSC has requested a reboot',
     subscribe => Package['powershell'],
-
+  }
 }

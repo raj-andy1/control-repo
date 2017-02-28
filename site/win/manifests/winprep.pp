@@ -8,6 +8,12 @@ class win::winprep {
     provider => 'chocolatey',
   }
 
+  {
+    reboot { 'after':
+      message   => 'DSC has requested a reboot',
+      subscripe =>  Package['powershell'],
+    }
+
   dsc_xdnsserveraddress { 'add domain':
     ensure             => present,
     dsc_addressfamily  => 'IPv4',

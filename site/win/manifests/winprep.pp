@@ -6,4 +6,11 @@ class win::winprep {
     ensure   => latest,
     provider => 'chocolatey',
   }
+
+  dsc_xdnsserveraddress { 'add domain':
+    ensure             => present,
+    dsc_addressfamily  => 'IPv4',
+    dsc_address        => '192.168.0.12',
+    dsc_interfacealias => 'Ethernet',
+  }
 }

@@ -1,5 +1,5 @@
-# /etc/puppetlabs/code/environments/production/site/sutterh/manifests/uc2.pp
-# Sample Puppet code to demonstrate domain joining
+# /etc/puppetlabs/code/environments/production/site/sutterh/manifests/uc3.pp
+# Sample Puppet code to automate joining a domain using DSC
 
 class sutterh::uc3 (
   $domainnm,

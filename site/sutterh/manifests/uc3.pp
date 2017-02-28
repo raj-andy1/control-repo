@@ -8,6 +8,12 @@ class sutterh::uc3 (
   $ounm,
 
 )
+
+  reboot { 'dsc_reboot':
+    message => 'DSC has requested a reboot',
+    when    => pending,
+  }
+
 {
   dsc_xcomputer { 'JoinDomain':
     dsc_name       => $::hostname,

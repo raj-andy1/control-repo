@@ -2,7 +2,7 @@
 # Sample Puppet code to demonstrate installing a windows feature (IIS) via DSC
 
 class sutterh::uc4 {
-  dsc_windowsfeature { 'IIS':
+  dsc_windowsfeature { 'Web Server':
   ensure   =>  present,
   dsc_name => $::hostname,
 

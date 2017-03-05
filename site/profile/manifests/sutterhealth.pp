@@ -8,6 +8,6 @@ class profile::sutterhealth{
   include sutterh::uc3
   include sutterh::uc4
 
-  Class['sutterh::uc1'] -> Class['sutterh::uc2'] -> Class['sutterh::uc3'] -> Class['sutterh::uc4']
+  Class['sutterh::uc1'] -> Class['sutterh::uc2'] -> Class['sutterh::uc4'] -> Class['sutterh::uc3']
 
 }

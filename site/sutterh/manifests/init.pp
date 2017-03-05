@@ -3,6 +3,4 @@
 
 class sutterh {
 
-Class['sutter::uc1'] -> Class['sutterh::uc2'] -> Class['sutterh::uc3'] -> Class['sutterh::uc4']
-
 }

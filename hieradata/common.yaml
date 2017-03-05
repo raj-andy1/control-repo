@@ -2,6 +2,6 @@
 #message: "This node is using common data"
 
 sutterh::uc3::domainnm: andyr.corp
-sutterh::uc3::domainusernm: Administrator
+sutterh::uc3::domainusernm: andyr.corp\Administrator
 sutterh::uc3::domainpasswd: Puppetlabs01
 sutterh::uc3::ounm: OU=PuppetUsers,DC=andyr,DC=corp

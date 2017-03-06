@@ -9,6 +9,7 @@ class arhiera {
       '%{environment}',
       'common',
     ],
+
     eyaml           => true,
     eyaml_extension => 'eyaml',
   }

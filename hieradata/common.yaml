@@ -3,4 +3,14 @@
 
 sutterh::uc3::domainnm: andyr.corp
 sutterh::uc3::domainusernm: andyr.corp\Administrator
+sutterh::uc3::domainpasswd: >
+  ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEw
+    DQYJKoZIhvcNAQEBBQAEggEAv/zcCVn65QqhxH+F4zWDdxSXIgGeG4ohipJ5
+    hdWj+dTRgeRMz7oFCFx3unRng4nUI6OVBKQWe+SuljmVjUiKnOSzgjHP9Pgc
+    norKuv9SpL2B/yjuk+u3Y5B8FbHgFOlgoi2kTlvNMm1jrvDv27erjeexOl25
+    dYD+wPkR2vD1uoC3vWTEiBpiLwF+/4wxh7MOqfMaCrN+5EGQ65HAi6NFc43i
+    LLUiSEuxGHzxIjCFc8Cl68WQjdCd51di1SKbDFgCfjD3VRm5l3hGUaS3IXal
+    6sdwRmaqMvLehpbllVhm/Rn7yXR7CZ9LK6ucxmL3PVLLoCQy+TutwRQQANyH
+    8e9PczA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBCvyJLS5f+G/5imwoM
+    ksgDgBBt3b9pTvVM0F98i45WauwK]
 sutterh::uc3::ounm: OU=PuppetUsers,DC=andyr,DC=corp

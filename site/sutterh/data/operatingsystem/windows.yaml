@@ -5,3 +5,4 @@
   sutterh::uc3::domainusernm: andyr.corp\Administrator
   sutterh::uc3::domainpasswd: Puppetlabs01
   sutterh::uc3::ounm: OU=PuppetUsers,DC=andyr,DC=corp
+  sutterh::uc4::windowsfeaturenm: Web-Server

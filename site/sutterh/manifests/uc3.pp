@@ -2,6 +2,7 @@
 # Sample Puppet code to automate joining a domain using DSC
 
 class sutterh::uc3 (
+  $dscdnsipadress,
   $domainnm,
   $domainusernm,
   $domainpasswd,
@@ -17,7 +18,7 @@ class sutterh::uc3 (
   dsc_xdnsserveraddress { 'add domain':
     ensure             => present,
     dsc_addressfamily  => 'IPv4',
-    dsc_address        => '192.168.0.12',
+    dsc_address        => $dscdnsipadress,
     dsc_interfacealias => 'Ethernet',
   }
 

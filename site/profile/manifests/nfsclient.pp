@@ -2,6 +2,10 @@
 # Install nfs-client
 
 class profile::nfsclient {
-  include arnfs::arnfsclient
+  class {'::nfs':
+    client_enabled => true,
+    }
 
+  Nfs::Client::Mount <<| |>> {
+    }
 }

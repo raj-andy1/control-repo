@@ -12,8 +12,7 @@ class profile::linnode {
   host {'ar-demonfss':
     ensure => present,
     ip     => '10.32.173.1',
-
-  }
+  } ->
 
   package {'tcpdump-4.5.1-3.el7.x86_64.rpm':
     ensure   =>  installed,

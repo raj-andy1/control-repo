@@ -7,7 +7,7 @@ class profile::linnode {
   include arinifile
   #include aropenssh
   #include manage_users::testusers
-  include profile::nfs-client
+  include profile::nfsclient
 
   package {'tcpdump-4.5.1-3.el7.x86_64.rpm':
     ensure   =>  installed,

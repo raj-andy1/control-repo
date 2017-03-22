@@ -10,8 +10,9 @@ class profile::linnode (
   include arinifile
   include profile::nfsclient
 
-  host {'$linnodenfsnm':
+  host {'nfsservernm':
     ensure => present,
+    name   => $linnodenfsnm,
     ip     => $linnodednsip,
   }
 
@@ -21,7 +22,7 @@ class profile::linnode (
     source   =>  '/var/nfsshare/tcpdump-4.5.1-3.el7.x86_64.rpm',
     require  => [
       Class['profile::nfsclient'],
-      Host['$linnodenfsnm'],
+      Host['nfsservernm'],
       ],
   }
 

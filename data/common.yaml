@@ -1,6 +1,6 @@
 ---
 #message: "This node is using common data"
 
-  profile::linnode::linnodednsip: 192.168.0.73
-  profile::linnode::linnodenfsnm: ar-demonfss
+  profile::linnode::linnodednsip: 192.168.0.55
+  profile::linnode::linnodenfsnm: andyr-demonfs
   profile::linnode::ntpservernm: ['nist-time-server.eoni.com']

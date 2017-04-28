@@ -8,5 +8,5 @@ class arinifile {
     section => 'agent',
     setting => 'runinterval',
     value   => '10d',
-}
+  }
 }

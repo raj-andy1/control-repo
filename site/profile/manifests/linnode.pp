@@ -4,11 +4,16 @@
 class profile::linnode (
   $linnodednsip,
   $linnodenfsnm,
+  $ntpservernm,
   )
 
 {
   include arinifile
   include profile::nfsclient
+
+  class {'::ntp':
+  servers => $ntpservernm,
+  }
 
   host {'nfsservernm':
     ensure => present,

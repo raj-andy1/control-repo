@@ -3,3 +3,4 @@
 
   profile::linnode::linnodednsip: 192.168.0.73
   profile::linnode::linnodenfsnm: ar-demonfss
+  profile::baselinux::ntpservernm: nist-time-server.eoni.com

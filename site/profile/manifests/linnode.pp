@@ -18,6 +18,6 @@ class profile::linnode (
 
   package {'tcpdump':
     ensure => '4.5.1-3.el7',
-}
+  }
 
 }

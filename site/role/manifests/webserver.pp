@@ -5,5 +5,6 @@
 class role::webserver {
 
   include profile::linnode
+  include profile::demohttpd
 
 }

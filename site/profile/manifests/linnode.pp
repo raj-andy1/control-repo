@@ -22,7 +22,7 @@ class profile::linnode (
   }
 
   package {'tcpdump-4.5.1-3.el7.x86_64.rpm':
-    ensure   =>  installed,
+    ensure   =>  present,
     provider => rpm,
     source   =>  '/var/nfsshare/tcpdump-4.5.1-3.el7.x86_64.rpm',
     require  => [

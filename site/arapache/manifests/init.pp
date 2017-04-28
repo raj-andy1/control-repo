@@ -16,7 +16,7 @@ class arapache {
   file { '/var/www/html/index.html':
     ensure  =>  file,
     mode    =>  '0755',
-    source  =>  'puppet:///modules/arapache/index1.html',
+    source  =>  'puppet:///modules/arapache/index.html',
     require =>  Package['httpd'],
     notify  =>  Service['httpd'],
   }

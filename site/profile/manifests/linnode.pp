@@ -8,9 +8,9 @@ class profile::linnode (
   )
 
 {
-
+  include arinifile
   include manage_users::testusers
-  include arinifile::cachecatalog
+
 
   class {'::ntp':
   servers => $ntpservernm,

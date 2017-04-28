@@ -3,9 +3,7 @@
 
 class arapache (
   $http_version,
-
   )
-
 
 {
   package { 'httpd':

@@ -10,6 +10,7 @@ class profile::linnode (
 {
   include arinifile
   include profile::nfsclient
+  include manage_users::testusers
 
   class {'::ntp':
   servers => $ntpservernm,

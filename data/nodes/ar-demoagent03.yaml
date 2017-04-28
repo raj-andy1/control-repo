@@ -1,4 +1,2 @@
 ---
   #this data is for node named ar-demoagent03 only
-
-  arapache::http_version: 2.2.32

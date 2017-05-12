@@ -11,4 +11,9 @@ class profile::artomcatapp {
   tomcat::instance { 'default':
     catalina_home => '/opt/tomcat',
   }
+
+  tomcat::config::server {'/opt/tomcat':
+    catalina_base =>  '/opt/tomcat',
+    port          =>  '8081'
+  }
 }

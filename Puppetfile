@@ -43,3 +43,4 @@ mod 'puppetlabs/image_build'
 mod 'puppetlabs/dummy_service'
 mod 'puppetlabs-tomcat', '1.7.0'
 mod 'puppetlabs-java', '1.6.0'
+mod 'puppetlabs-lvm', '0.9.0

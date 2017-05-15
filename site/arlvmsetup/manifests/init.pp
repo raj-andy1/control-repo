@@ -2,7 +2,7 @@
 # sample profile to demonstrate puppet lvm
 class arlvmsetup {
 
-physical_volume { '/dev/hdc':
+physical_volume { '/dev/sdb':
   ensure => present,
 }
 
@@ -17,7 +17,7 @@ logical_volume { 'mylv':
   size         => '20G',
 }
 
-filesystem { '/dev/myvg/mylv':
+filesystem { '/myvg/mylv':
   ensure  => present,
   fs_type => 'ext3',
   options => '-b 4096 -E stride=32,stripe-width=64',

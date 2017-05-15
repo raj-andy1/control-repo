@@ -12,11 +12,6 @@ class profile::artomcatapp {
     catalina_home => '/opt/tomcat',
   }
 
-  tomcat::config::server { 'defaut':
-    catalina_base => '/opt/tomcat',
-    port          => '8091',
-  }
-
   tomcat::war {'sample.war':
     catalina_base => '/opt/tomcat',
     war_source    => 'https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war',

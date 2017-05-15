@@ -11,6 +11,7 @@ class profile::artomcatapp {
   tomcat::instance { 'default':
     catalina_home => '/opt/tomcat',
   }
+
   tomcat::war {'sample.war':
     catalina_base => '/opt/tomcat',
     war_source    => 'https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war',

@@ -1,5 +1,5 @@
 # /etc/puppetlabs/code/environments/production/profile/manifests/artomcatapp.pp
-#sample profile to demonstrate tomcat installation and Configurations
+# sample profile to demonstrate tomcat installation and Configurations
 class profile::artomcatapp {
 
   include java

@@ -8,8 +8,8 @@ class arlvmsetup {
         physical_volumes => '/dev/sda2',
         logical_volumes  => {
           'yah'    => {'size' => '8G'},
-          },
-        },
-      },
-    },
+          }
+        }
+      }
+    }
   }

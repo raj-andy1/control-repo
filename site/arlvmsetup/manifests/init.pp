@@ -2,6 +2,8 @@
 # sample profile to demonstrate puppet lvm
 class arlvmsetup {
 
+include lvm
+
 physical_volume { '/dev/sdb':
   ensure => present,
 }

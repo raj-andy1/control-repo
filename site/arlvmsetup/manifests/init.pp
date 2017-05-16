@@ -2,14 +2,24 @@
 # sample profile to demonstrate puppet lvm
 class arlvmsetup {
 
-  class { 'lvm':
-    volume_groups    => {
-      'myvg' => {
-        physical_volumes => '/dev/sda2',
-        logical_volumes  => {
-          'yah'    => {'size' => '8G'},
-          }
-        }
-      }
-    }
+  physical_volume { '/dev/hdc':
+    ensure => present,
   }
+
+  volume_group { 'myvg':
+    ensure           => present,
+    physical_volumes => '/dev/sdb',
+  }
+
+  logical_volume { 'mylv':
+    ensure       => present,
+    volume_group => 'myvg',
+    size         => '8G',
+  }
+
+  filesystem { '/dev/myvg/mylv':
+    ensure  => present,
+    fs_type => 'ext3',
+    options => '-b 4096 -E stride=32,stripe-width=64',
+  }
+}

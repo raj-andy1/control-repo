@@ -2,7 +2,7 @@
 # sample profile to demonstrate puppet lvm
 class arlvmsetup {
 
-  physical_volume { '/dev/hdc':
+  physical_volume { '/dev/sdb':
     ensure => present,
   }
 

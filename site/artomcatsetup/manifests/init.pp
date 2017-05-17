@@ -1,7 +1,7 @@
-#/etc/puppetlabs/code/environments/production/site/ar-tomcatapp/manifests/init.pp
+#/etc/puppetlabs/code/environments/production/site/artomcatsetup/manifests/init.pp
 #sample code to demonstrate tomcat installation and Configurations
 
-class artomcatapp {
+class artomcatsetup {
 
   include java
 

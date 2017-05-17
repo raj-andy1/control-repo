@@ -3,16 +3,24 @@
 
 class profile::arlvmsetup {
 
-  class { 'lvm':
-    volume_groups => {
-      'vg_data' => {
-          physical_volumes  => [ '/dev/xvdb' ],
-            logical_volumes => {
-              'yah' => {
-                'size' => '8G',
-                },
-              },
-            },
-          },
-        }
-      }
+  physical_volume { '/dev/xdvb':
+    ensure => present,
+  }
+
+  volume_group { 'myvg':
+    ensure           => present,
+    physical_volumes => '/dev/xdvb',
+  }
+
+  logical_volume { 'mylv':
+    ensure       => present,
+    volume_group => 'myvg',
+    size         => '8G',
+  }
+
+  filesystem { '/mylv':
+    ensure  => present,
+    fs_type => 'ext3',
+    options => '-b 4096 -E stride=32,stripe-width=64',
+  }
+}

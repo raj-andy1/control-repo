@@ -1,9 +1,14 @@
 # /etc/puppetlabs/code/environments/production/site/profile/manifests/newarlvmsetup.pp
 # sample profile to demonstrate puppet lvm
 class profile::newarlvmsetup {
+
+  package {'lvm2':
+    ensure => present,
+  } ->
+
   file {'/yah':
     ensure => directory
-  }
+  } ->
 
   class { 'lvm':
     volume_groups    => {

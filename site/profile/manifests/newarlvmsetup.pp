@@ -11,7 +11,7 @@ class profile::newarlvmsetup {
         physical_volumes => '/dev/xvdb' ,
         logical_volumes  => {
           'yah' => {
-            'size'              => '8G',
+            'size'              => '6G',
             'mountpath'         => '/yah',
             'mountpath_require' => true,
           },

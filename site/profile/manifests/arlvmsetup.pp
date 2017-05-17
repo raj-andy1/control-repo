@@ -18,7 +18,7 @@ class profile::arlvmsetup {
     size         => '6G',
   }
 
-  filesystem { '/mylv':
+  filesystem { '/dev/myvg/mylv':
     ensure  => present,
     fs_type => 'ext3',
     options => '-b 4096 -E stride=32,stripe-width=64',

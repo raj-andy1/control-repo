@@ -1,7 +1,7 @@
 # /etc/puppetlabs/code/environments/production/site/profile/manifests/lampstack.pp
 class profile::lampstack {
 
-  notify { "this is ${fqdn}":}
+  notify { "this is ${::fqdn}":}
   include manage_users
   include mysql::server
   include apache
@@ -9,8 +9,8 @@ class profile::lampstack {
   include wordpress
 
   apache::vhost { $::fqdn:
-    port => '80',
-    priority  => '00',
-    docroot => '/opt/wordpress',
+    port     => '80',
+    priority => '00',
+    docroot  => '/opt/wordpress',
   }
 }

@@ -1,0 +1,8 @@
+---
+#Data for nodes running Windows
+
+  windemo::uc3::domainnm: andyr.corp
+  windemo::uc3::domainusernm: andyr.corp\Administrator
+  windemo::uc3::domainpasswd: Puppetlabs01
+  windemo::uc3::ounm: OU=PuppetUsers,DC=andyr,DC=corp
+  windemo::uc4::windowsfeaturenm: Web-Server

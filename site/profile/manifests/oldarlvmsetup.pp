@@ -1,7 +1,7 @@
-# /etc/puppetlabs/code/environments/production/site/arlvmsetup/manifests/init.pp
+# /etc/puppetlabs/code/environments/production/profile/manifests/oldarlvmsetup.pp
 # sample profile to demonstrate puppet lvm
 
-class profile::arlvmsetup {
+class profile::oldarlvmsetup {
 
   physical_volume { '/dev/xvdb':
     ensure => present,

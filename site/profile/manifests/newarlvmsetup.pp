@@ -4,14 +4,15 @@ class profile::newarlvmsetup {
 
   package {'lvm2':
     ensure => present,
-  } ->
+  }
 
   file {'/yah':
     ensure => directory
-  } ->
+  }
 
   class { 'lvm':
-    volume_groups    => {
+    require       => [ Package['lvm2'], File['/yah']],
+    volume_groups => {
       'myvg' => {
         physical_volumes => '/dev/xvdb' ,
         logical_volumes  => {

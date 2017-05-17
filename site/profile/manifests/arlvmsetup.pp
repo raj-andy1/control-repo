@@ -15,7 +15,7 @@ class profile::arlvmsetup {
   logical_volume { 'mylv':
     ensure       => present,
     volume_group => 'myvg',
-    size         => '8G',
+    size         => '6G',
   }
 
   filesystem { '/mylv':

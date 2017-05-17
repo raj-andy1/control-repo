@@ -11,7 +11,10 @@ class profile::newarlvmsetup {
   }
 
   class { 'lvm':
-    require       => [ Package['lvm2'], File['/yah']],
+    require       => [
+      Package['lvm2'],
+      File['/yah'],
+    ],
     volume_groups => {
       'myvg' => {
         physical_volumes => '/dev/xvdb' ,

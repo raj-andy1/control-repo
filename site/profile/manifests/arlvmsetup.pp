@@ -3,13 +3,13 @@
 
 class profile::arlvmsetup {
 
-  physical_volume { '/dev/xdvb':
+  physical_volume { '/dev/xvdb':
     ensure => present,
   }
 
   volume_group { 'myvg':
     ensure           => present,
-    physical_volumes => '/dev/xdvb',
+    physical_volumes => '/dev/xvdb',
   }
 
   logical_volume { 'mylv':

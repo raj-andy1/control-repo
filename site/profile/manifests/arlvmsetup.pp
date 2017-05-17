@@ -6,7 +6,7 @@ class profile::arlvmsetup {
   class { 'lvm':
     volume_groups => {
       'vg_data' => {
-          physical_volumes  => [ '/dev/sdb' ],
+          physical_volumes  => [ '/dev/xvdb' ],
             logical_volumes => {
               'yah' => {
                 'size' => '8G',

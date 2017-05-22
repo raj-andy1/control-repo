@@ -9,7 +9,7 @@ class artomcatsetup (
   include java
 
   tomcat::install { $tomcatinstalldir:
-    source_url => 'http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.78.tar.gz',
+    source_url => 'http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.77/bin/apache-tomcat-7.0.77.tar.gz',
   }
 
   tomcat::instance { 'default':

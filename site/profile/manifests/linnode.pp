@@ -9,6 +9,7 @@ class profile::linnode (
 
 {
   include arinifile
+  include arinifile::setenv
   include manage_users::testusers
 
 

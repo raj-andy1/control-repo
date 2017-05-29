@@ -5,8 +5,8 @@ class mariadb {
   package { $maria_package_name:
   ensure => present,
   }
-  service {"mariadb":
-  ensure  =>  running,
-  enable  =>  true,
+  service {'mariadb':
+  ensure =>  running,
+  enable =>  true,
   }
 }

@@ -4,3 +4,4 @@
   profile::linnode::linnodednsip: 192.168.0.55
   profile::linnode::linnodenfsnm: andyr-demonfs
   profile::linnode::ntpservernm: ['nist-time-server.eoni.com']
+  arinifile::runint: 10d

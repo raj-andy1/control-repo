@@ -5,3 +5,4 @@
   profile::linnode::linnodenfsnm: andyr-demonfs
   profile::linnode::ntpservernm: ['nist-time-server.eoni.com']
   arinifile::runint: 10d
+  andyaws::agent_num: 11

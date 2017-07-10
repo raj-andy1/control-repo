@@ -1,21 +1,21 @@
 # /etc/puppetlabs/code/environments/production/site/andyaws/manifests/init.pp
-class andyaws {
-  ec2_instance { 'andyr-puppetmaster':
-  ensure  =>  absent,
-  image_id  =>  'ami-775e4f16',
-    }
-  ec2_instance { 'andyr-puppetmaster01':
-    name  =>  'andyr-puppetmastermaster',
+# Sample code to provision AWS instances
+
+class andyaws (
+  $agent_num,
+  )
+  {
+  ec2_instance { 'andyr-testing-agent':
+    name  =>  'Andy R 2017.2 Testing Agent ${agent_num}  ',
     ensure  =>  present,
-    image_id  =>  'ami-775e4f16',
-    instance_type =>  'm3.large',
+    image_id  =>  'ami-b55a51cc',
+    instance_type =>  't2.small',
     key_name  =>  'andy.rajagopalan',
-    iam_instance_profile_name =>  'puppetlabs_aws_provisioner',
     tags  =>  {
         name  => 'andy.rajagopalan',
         department  => 'tse',
         project => 'internal-practice',
-        created_by => 'andyr@puppet.com',
+        created_by => 'Andy R',
   }
  }
 }

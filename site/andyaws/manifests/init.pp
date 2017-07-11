@@ -2,12 +2,11 @@
 # Sample code to provision AWS instances
 
 class andyaws (
-  $agent_num,
-  $aws_region = "us-west-2",
+  $aws_region = "us-west-2a",
   )
   {
   ec2_instance { 'andyr-testing-agent':
-    name  =>  'Andy R 2017.2 Testing Agent ${agent_num}  ',
+    name  =>  'Andy R 2017.2 Testing Agent-11',
     ensure  =>  present,
     region  => $aws_region,
     image_id  =>  'ami-b55a51cc',

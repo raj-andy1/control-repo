@@ -13,7 +13,7 @@ class andyaws (
     image_id  =>  'ami-b55a51cc',
     instance_type =>  't2.small',
     key_name  =>  'andy.rajagopalan',
-    vpc_id  =>  'vpc-81a24ee5',
+    subnet_id  =>  'vpc-81a24ee5',
     tags  =>  {
         name  => 'andy.rajagopalan',
         department  => 'tse',

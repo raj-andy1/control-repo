@@ -11,6 +11,7 @@ class andyaws (
     ensure  =>  present,
     region  => $aws_region,
     image_id  =>  'ami-b55a51cc',
+    vpc_group => 'vpc-81a24ee5',
     subnet  =>  'subnet-b0f503d4',
     security_groups =>  ['sg-2bad064c','sg-28ad064f'],
     instance_type =>  't2.small',

@@ -2,7 +2,7 @@
 # Sample code to provision AWS instances
 
 class andyaws (
-  $aws_region = "us-west-2a",
+  $aws_region = "us-west-2",
   )
   {
   ec2_instance { 'andyr-testing-agent':

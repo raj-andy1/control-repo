@@ -6,7 +6,7 @@ class andyaws (
   )
   {
   ec2_instance { 'andyr-testing-agent':
-    name  =>  'Andy R 2017.2 Testing Agent-12',
+    name  =>  'Andy R 2017.2 Testing Agent-${agent_num}',
     ensure  =>  present,
     region  => $aws_region,
     availability_zone => 'us-west-2a',

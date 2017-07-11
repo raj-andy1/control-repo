@@ -11,10 +11,10 @@ class andyaws (
     ensure  =>  present,
     region  => $aws_region,
     image_id  =>  'ami-b55a51cc',
+    subnet  =>  'vpc-81a24ee5',
+    security_groups =>  ['sg-2bad064c','sg-28ad064f'],
     instance_type =>  't2.small',
     key_name  =>  'andy.rajagopalan',
-    subnet  =>  'vpc-81a24ee5',
-    security_group =>  ['sg-2bad064c','sg-28ad064f'],
     tags  =>  {
         name  => 'andy.rajagopalan',
         department  => 'tse',

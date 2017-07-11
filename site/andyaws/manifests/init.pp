@@ -13,8 +13,8 @@ class andyaws (
     image_id  =>  'ami-b55a51cc',
     subnet  =>  'tse-us-west-2-avza',
     security_groups =>  [
-    'sg-2bad064c',
-    'sg-28ad064f'
+    'tse-us-west-2-crossconnect',
+    'tse-us-west-2-agents'
     ],
     instance_type =>  't2.small',
     key_name  =>  'andy.rajagopalan',

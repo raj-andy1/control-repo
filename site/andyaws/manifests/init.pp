@@ -3,6 +3,7 @@
 
 class andyaws (
   $aws_region = "us-west-2",
+  $agent_num,
   )
   {
   ec2_instance { 'andyr-testing-agent':

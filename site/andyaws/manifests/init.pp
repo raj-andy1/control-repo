@@ -12,7 +12,10 @@ class andyaws (
     availability_zone => 'us-west-2a',
     image_id  =>  'ami-b55a51cc',
     subnet  =>  'subnet-b0f503d4',
-    security_groups =>  ['sg-2bad064c','sg-28ad064f'],
+    security_groups =>  [
+    'sg-2bad064c',
+    'sg-28ad064f'
+    ],
     instance_type =>  't2.small',
     key_name  =>  'andy.rajagopalan',
     tags  =>  {

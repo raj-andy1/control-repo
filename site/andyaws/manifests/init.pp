@@ -9,6 +9,7 @@ class andyaws (
     name  =>  'Andy R 2017.2 Testing Agent-11',
     ensure  =>  present,
     region  => $aws_region,
+    availability_zone => 'us-west-2a',
     image_id  =>  'ami-b55a51cc',
     subnet  =>  'subnet-b0f503d4',
     security_groups =>  ['sg-2bad064c','sg-28ad064f'],

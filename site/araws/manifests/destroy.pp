@@ -1,7 +1,7 @@
 # /etc/puppetlabs/code/environments/production/site/andyaws/manifests/destroy.pp
 # Sample code to de-provision AWS instances
 
-class andyaws::destroy (
+class araws::destroy (
   $aws_instance_name = 'Andy R Testing Agent - 13',
   )
 {

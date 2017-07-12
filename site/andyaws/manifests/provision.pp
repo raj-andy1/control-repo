@@ -6,7 +6,7 @@ class andyaws::provision (
   $agent_num = "13",
   )
   {
-  ec2_instance { "Andy R Testing Agent${agent_num}":
+  ec2_instance { "Andy R Testing Agent - ${agent_num}":
     ensure  =>  present,
     region  => $aws_region,
     availability_zone => 'us-west-2a',

@@ -24,7 +24,7 @@ class andyaws::provision (
       delete_on_termination => 'true',
       volume_type          => 'gp2',
       }
-    ]
+    ],
     key_name  =>  'andy.rajagopalan',
     tags  =>  {
         name  => 'andy.rajagopalan',

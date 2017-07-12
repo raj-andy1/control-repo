@@ -1,7 +1,7 @@
 # /etc/puppetlabs/code/environments/production/site/andyaws/manifests/provision.pp
 # Sample code to provision AWS instances
 
-class andyaws::provision (
+class araws::provision (
   $aws_region = "us-west-2",
   $agent_num = "14",
   )

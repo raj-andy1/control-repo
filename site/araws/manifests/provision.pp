@@ -3,7 +3,7 @@
 
 class andyaws::provision (
   $aws_region = "us-west-2",
-  $agent_num = "13",
+  $agent_num = "14",
   )
   {
   ec2_instance { "Andy R Testing Agent - ${agent_num}":
@@ -17,6 +17,14 @@ class andyaws::provision (
     'tse-us-west-2-agents'
     ],
     instance_type =>  't2.small',
+    block_devices => [
+    {
+      device_name           => '/dev/sdb',
+      volume_size           => 8,
+      delete_on_termination => 'true',
+      volume_type          => 'gp2',
+      }
+    ]
     key_name  =>  'andy.rajagopalan',
     tags  =>  {
         name  => 'andy.rajagopalan',

@@ -6,7 +6,7 @@ class araws::destroy (
   )
 {
   ec2_instance { "$aws_instance_name":
-    region  =>  $andyaws::provision::aws_region,
+    region  =>  $araws::provision::aws_region,
     ensure  => absent,
   }
 }

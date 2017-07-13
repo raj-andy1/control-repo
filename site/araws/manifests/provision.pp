@@ -32,5 +32,6 @@ class araws::provision (
         project => 'internal-practice',
         created_by => 'Andy R',
   }
+  user_data       => template('agent-pe-userdata.erb'),
  }
 }

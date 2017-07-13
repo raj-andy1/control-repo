@@ -8,7 +8,7 @@ class arlvmsetup {
         physical_volumes => '/dev/xvdb' ,
         logical_volumes  => {
           'yah' => {
-            'size'              => '6G',
+            'size'              => '8G',
             'mountpath'         => '/yah',
           },
         },

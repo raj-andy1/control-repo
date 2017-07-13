@@ -25,6 +25,7 @@ class araws::provision (
       volume_type          => 'gp2',
       }
     ],
+    user_data       => template('agent-pe-userdata.erb'),
     key_name  =>  'andy.rajagopalan',
     tags  =>  {
         name  => 'andy.rajagopalan',
@@ -32,6 +33,5 @@ class araws::provision (
         project => 'internal-practice',
         created_by => 'Andy R',
   }
-  user_data       => template('agent-pe-userdata.erb'),
  }
 }

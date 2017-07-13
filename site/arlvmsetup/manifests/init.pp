@@ -2,6 +2,7 @@
 # sample profile to demonstrate puppet lvm
 class arlvmsetup {
   class { 'lvm':
+    manage_pkg = true,
     volume_groups => {
       'myvg' => {
         physical_volumes => '/dev/xvdb' ,

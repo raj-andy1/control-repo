@@ -4,6 +4,14 @@
 class araws::provision (
   $aws_region = "us-west-2",
   $agent_num = "14",
+  $avza =,
+  $img_id =,
+  $inst_type =,
+  $snet=,
+  $secg=,
+  $vol_nm = ,
+  $vol_sz =,
+  $key_nm =,
   )
   {
   ec2_instance { "Andy R Testing Agent - ${agent_num}":

@@ -3,8 +3,6 @@
 
 class profile::arjenkins {
 
-
-
   class { 'jenkins':
     plugin_hash => {
       'git' => { version => '3.4.1' },

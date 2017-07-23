@@ -6,28 +6,26 @@ class profile::arjenkins {
   include jenkins
 
   jenkins::plugin_hash:
-    'git' :
+    git  :
       version : '3.4.1'
-    'workflow-scm-step' :
+    workflow-scm-step  :
       version : '1.14.2'
-    'Credentials' :
+    credentials  :
       version : '2.1.14'
-    'structs' :
+    structs  :
       version : '1.7'
-    'puppet-enterprise-pipeline' :
+    puppet-enterprise-pipeline  :
       version : '1.3.1'
-    'workflow-api' :
+    workflow-api  :
       version : '2.3'
-    'workflow-basic-steps' :
+    workflow-basic-steps  :
       version : '2.0'
-    'workflow-cps' :
+    workflow-cps  :
       version : '2.17'
-    'workflow-durable-task-step' :
+    workflow-durable-task-step  :
       version :'2.4'
-    'credentials' :
-      version : '1.21'
-    'plain-credentials' :
+    plain-credentials  :
       version : '1.2'
-    'script-security' :
-      version : '1.22' 
+    script-security  :
+      version : '1.22'
 }

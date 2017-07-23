@@ -3,12 +3,12 @@
 
 class araws::provision (
   $inst_nm = 'AndyR - Jenkins Server',
-  $aws_region = "us-west-2",
-  $avza = "us-west-2a",
-  $img_id,
-  $inst_type ,
-  $snet,
-  $secg,
+  $aws_region = 'us-west-2',
+  $avza = 'us-west-2a',
+  $img_id = 'ami-b55a51cc',
+  $inst_type = 't2.large',
+  $snet = 'tse-us-west-2-avza',
+  $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents],
   $add_vol = 'false',
   $vol_nm,
   $vol_sz,

@@ -31,16 +31,5 @@ class araws::provision (
         project => 'internal-practice',
         created_by => 'Andy R',
   },
-  if $add_vol {
-  #add additional disks only if $add_vol = true
-    block_devices => [
-    {
-      device_name           => $vol_nm,
-      volume_size           => $vol_sz,
-      delete_on_termination => 'true',
-      volume_type          => 'gp2',
-      }
-    ]
-  },
  }
 }

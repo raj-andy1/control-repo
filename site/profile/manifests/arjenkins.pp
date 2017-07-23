@@ -7,6 +7,7 @@ class profile::arjenkins {
     plugin_hash => {
       'git' => { version => '3.4.1' },
       'github' => { version => '1.27.0' },
+      'jackson2-api' => { version => '2.7.3' },
       'git-client' => { version => '2.4.6' },
       'github-api' => { version => '1.86' },
       'token-macro' => { version => '2.1' },

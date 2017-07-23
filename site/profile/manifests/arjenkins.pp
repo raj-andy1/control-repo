@@ -5,7 +5,7 @@ class profile::arjenkins {
 
   include jenkins
 
-  jenkins::plugin_hash: {
+  jenkins::plugins {
     git  :
       version : '3.4.1'
     workflow-scm-step  :

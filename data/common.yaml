@@ -5,9 +5,3 @@
   profile::linnode::linnodenfsnm: andyr-demonfs
   profile::linnode::ntpservernm: ['nist-time-server.eoni.com']
   arinifile::runint: 10d
-  araws::aws_region: 'us-west-2'
-  araws::avza: 'us-west-2a'
-  araws::img_id: 'ami'
-  araws::inst_type: 'ami-b55a51cc'
-  araws::snet: 'tse-us-west-2-avza'
-  araws::secg: ['tse-us-west-2-crossconnect','tse-us-west-2-agents]

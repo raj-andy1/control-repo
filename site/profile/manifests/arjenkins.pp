@@ -25,6 +25,8 @@ class profile::arjenkins {
       'scm-api' => { version => '2.1.1' },
       'ace-editor' => { version => '1.0.1' },
       'mailer' => { version => '1.20' },
+      'display-url-api' => { version => '2.0' },
+
     }
   }
 }

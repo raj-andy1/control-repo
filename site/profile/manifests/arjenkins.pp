@@ -6,7 +6,7 @@ class profile::arjenkins {
   class { 'jenkins':
     plugin_hash => {
       'git' => { version => '3.4.1' },
-      'git-client' => { version => '1.19' },
+      'git-client' => { version => '1.19.0' },
       'structs' => { version => '1.7'},
       'puppet-enterprise-pipeline' => { version => '1.3.1'},
       'workflow-api' => { version => '2.3' },

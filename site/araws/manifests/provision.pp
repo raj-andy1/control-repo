@@ -10,8 +10,8 @@ class araws::provision (
   $snet = 'tse-us-west-2-avza',
   $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents'],
   $add_vol = 'false',
-  $vol_nm,
-  $vol_sz,
+  $vol_nm = '',
+  $vol_sz = '',
   $key_nm = 'andy.rajagopalan',
   )
   {

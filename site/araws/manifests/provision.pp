@@ -2,7 +2,7 @@
 # Sample code to provision AWS instances
 
 class araws::provision (
-  $title =,
+  $title = 'AndyR - Jenkins Server',
   $aws_region = "us-west-2",
   $avza = "us-west-2a",
   $img_id =,

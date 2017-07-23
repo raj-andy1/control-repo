@@ -4,7 +4,7 @@
 class araws::provision (
   $title =,
   $aws_region = "us-west-2",
-  $avza = 'us-west-2a',
+  $avza = "us-west-2a",
   $img_id =,
   $inst_type =,
   $snet=,

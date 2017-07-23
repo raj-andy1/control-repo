@@ -10,7 +10,7 @@ class araws::provision (
   $snet,
   $secg,
   $add_vol='false',
-  $vol_nm = ,
+  $vol_nm,
   $vol_sz ,
   $key_nm = 'andy.rajagopalan',
   )

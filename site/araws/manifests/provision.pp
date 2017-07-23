@@ -30,7 +30,7 @@ class araws::provision (
         department  => 'tse',
         project => 'internal-practice',
         created_by => 'Andy R',
-  }
+  },
   if $add_vol {
   #add additional disks only if $add_vol = true
     block_devices => [

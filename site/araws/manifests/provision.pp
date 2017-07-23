@@ -5,13 +5,13 @@ class araws::provision (
   $title = 'AndyR - Jenkins Server',
   $aws_region = "us-west-2",
   $avza = "us-west-2a",
-  $img_id =,
-  $inst_type =,
-  $snet=,
-  $secg=,
+  $img_id ,
+  $inst_type ,
+  $snet,
+  $secg,
   $add_vol='false',
   $vol_nm = ,
-  $vol_sz =,
+  $vol_sz ,
   $key_nm = 'andy.rajagopalan',
   )
   {

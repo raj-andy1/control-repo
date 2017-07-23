@@ -40,7 +40,7 @@ class araws::provision (
       delete_on_termination => 'true',
       volume_type          => 'gp2',
       }
-    ],
-  }
+    ]
+  },
  }
 }

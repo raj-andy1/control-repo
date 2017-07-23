@@ -6,7 +6,11 @@ class profile::arjenkins {
   class { 'jenkins':
     plugin_hash => {
       'git' => { version => '3.4.1' },
+      'github' => { version => '1.27.0' },
       'git-client' => { version => '2.4.6' },
+      'github-api' => { version => '1.86' },
+      'token-macro' => { version => '2.1' },
+      'display-url-api' => { version => '2.0' },
       'structs' => { version => '1.9'},
       'puppet-enterprise-pipeline' => { version => '1.3.1'},
       'workflow-api' => { version => '2.3' },

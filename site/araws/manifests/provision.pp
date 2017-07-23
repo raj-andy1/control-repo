@@ -9,7 +9,7 @@ class araws::provision (
   $inst_type ,
   $snet,
   $secg,
-  $add_vol='false',
+  $add_vol = 'false',
   $vol_nm,
   $vol_sz,
   $key_nm = 'andy.rajagopalan',

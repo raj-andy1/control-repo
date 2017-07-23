@@ -7,7 +7,7 @@ class profile::arjenkins {
     plugin_hash => {
       'git' => { version => '3.4.1' },
       'git-client' => { version => '2.4.6' },
-      'structs' => { version => '1.7'},
+      'structs' => { version => '1.9'},
       'puppet-enterprise-pipeline' => { version => '1.3.1'},
       'workflow-api' => { version => '2.3' },
       'workflow-cps' => { version => '2.17'},
@@ -22,11 +22,12 @@ class profile::arjenkins {
       'ssh-credentials' => { version => '1.13' },
       'jquery-detached' => { version => '1.21',
         source => 'http://repo.jenkins-ci.org/releases/org/jenkins-ci/ui/jquery-detached/1.2.1/jquery-detached-1.2.1.hpi'},
-      'scm-api' => { version => '2.1.1' },
+      'scm-api' => { version => '2.2.0' },
       'ace-editor' => { version => '1.0.1' },
       'mailer' => { version => '1.20' },
-      'display-url-api' => { version => '2.0' },
-
+      'matrix-project' => { version => '1.11' },
+      'junit' => { version => '1.20' },
+      'script-security' => { version => '1.29.1' },
     }
   }
 }

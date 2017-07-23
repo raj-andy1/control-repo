@@ -20,7 +20,7 @@ class profile::arjenkins {
       'script-security' => { version => '1.22' },
       'durable-task' => { version => '1.12' },
       'ssh-credentials' => { version => '1.13' },
-      'jquery-detached' => { version => ‘1.21’ },
+      'jquery-detached' => { version => '1.21' },
       'scm-api' => { version => '2.1.1' },
       'ace-editor' => { version => '1.0.1' },
       'mailer' => { version => '1.20' },

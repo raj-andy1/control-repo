@@ -2,7 +2,7 @@
 # Sample code to provision AWS instances
 
 class araws::provision (
-  $title = 'AndyR - Jenkins Server',
+  $inst_nm = 'AndyR - Jenkins Server',
   $aws_region = "us-west-2",
   $avza = "us-west-2a",
   $img_id,
@@ -15,7 +15,7 @@ class araws::provision (
   $key_nm = 'andy.rajagopalan',
   )
   {
-  ec2_instance { "${title}":
+  ec2_instance { "$inst_nm":
     ensure  =>  present,
     region  => $aws_region,
     availability_zone => $avza,

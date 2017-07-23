@@ -5,7 +5,7 @@ class profile::arjenkins {
 
   include jenkins
 
-  jenkins::plugin_hash:
+  jenkins::plugin_hash: {
     git  :
       version : '3.4.1'
     workflow-scm-step  :
@@ -28,4 +28,5 @@ class profile::arjenkins {
       version : '1.2'
     script-security  :
       version : '1.22'
-}
+    }
+  }

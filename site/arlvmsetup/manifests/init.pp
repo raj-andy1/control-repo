@@ -8,7 +8,7 @@ class arlvmsetup {
         physical_volumes => '/dev/xvdb' ,
         logical_volumes  => {
           'yah' => {
-            'size'              => '8G',
+            'size'              =>  $::disks.xvdb.size,
             'mountpath'         => '/yah',
           },
         },

@@ -3,18 +3,25 @@
 
 class profile::arjenkins {
 
+
+
   class { 'jenkins':
     plugin_hash => {
       'git' => { version => '3.4.1' },
-      'workflow-scm-step' => { version => '1.14.2' },
+      'git-client' => { version => '1.19' },
       'structs' => { version => '1.7'},
       'puppet-enterprise-pipeline' => { version => '1.3.1'},
       'workflow-api' => { version => '2.3' },
-      'workflow-basic-steps' => { version => '2.0'},
       'workflow-cps' => { version => '2.17'},
+      'workflow-support' => { version => '2.2' },
+      'workflow-basic-steps' => { version => '2.0'},
       'workflow-durable-task-step' => { version =>'2.4'},
+      'workflow-scm-step' => { version => '2.6' },
+      'workflow-step-api' => { version => '2.9' },
       'plain-credentials' => { version => '1.2' },
       'script-security' => { version => '1.22' },
+      'durable-task' => { version => '1.12' },
+
     }
   }
 }

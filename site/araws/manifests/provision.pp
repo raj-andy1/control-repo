@@ -11,7 +11,7 @@ class araws::provision (
   $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents'],
   $add_vol = false,
   $vol_nm = '/dev/sdb',
-  $vol_sz = '8 Gi',
+  $vol_sz = '8',
   $key_nm = 'andy.rajagopalan',
   $pe_role = 'demo-webserver',
   )

@@ -16,23 +16,23 @@ class araws::provision (
   $pe_role = 'demo-webserver',
   )
   {
-  ec2_instance { "$inst_nm":
-    ensure  =>  present,
-    region  => $aws_region,
+  ec2_instance { $inst_nm:
+    ensure            =>  present,
+    region            => $aws_region,
     availability_zone => $avza,
-    image_id  =>  $img_id,
-    subnet  =>  $snet,
-    security_groups =>  $secg,
-    instance_type =>  $inst_type,
-    user_data       => template('araws/agent_pe_userdata.erb'),
-    key_name  => $key_nm,
-    tags  =>  {
-        name  => 'andy.rajagopalan',
-        department  => 'tse',
-        project => 'self-practice',
+    image_id          =>  $img_id,
+    subnet            =>  $snet,
+    security_groups   =>  $secg,
+    instance_type     =>  $inst_type,
+    user_data         => template('araws/agent_pe_userdata.erb'),
+    key_name          => $key_nm,
+    tags              =>  {
+        name       => 'andy.rajagopalan',
+        department => 'tse',
+        project    => 'self-practice',
         created_by => 'Andy R',
+   }
   }
- }
  if $add_vol {
  #add additional disks only if $add_vol = true
     Ec2_instance <|title == $inst_nm|> {
@@ -40,7 +40,7 @@ class araws::provision (
         {
           device_name           => $vol_nm,
           volume_size           => $vol_sz,
-          delete_on_termination => 'true',
+          delete_on_termination => true,
           volume_type          => 'gp2',
         }
       ]

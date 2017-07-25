@@ -1,112 +1,35 @@
-#!groovy
-node('control-repo') {
-  sshagent (credentials: ['jenkins-seteam-ssh']) {
-    withEnv(['PATH+EXTRA=/usr/local/bin']) {
+node {
+    stage ('Checkout Control Repo') {
       checkout scm
-
-      stage('Setup'){
-        ansiColor('xterm') {
-          sh(script: '''
-            export PATH=$PATH:$HOME/.rbenv/bin
-            rbenv global 2.3.1
-            eval "$(rbenv init -)"
-            rm -f Gemfile.lock
-            bundle install
-          ''')
-        }
-      }
-
-      stage('Lint Control Repo'){
-        ansiColor('xterm') {
-          sh(script: '''
-            export PATH=$PATH:$HOME/.rbenv/bin
-            rbenv global 2.3.1
-            eval "$(rbenv init -)"
-            bundle exec rake lint
-          ''')
-        }
-      }
-
-      stage('Syntax Check Control Repo'){
-        ansiColor('xterm') {
-          sh(script: '''
-            export PATH=$PATH:$HOME/.rbenv/bin
-            rbenv global 2.3.1
-            eval "$(rbenv init -)"
-            bundle exec rake syntax --verbose
-          ''')
-        }
-      }
-
-      stage('Validate Puppetfile in Control Repo'){
-        ansiColor('xterm') {
-          sh(script: '''
-            export PATH=$PATH:$HOME/.rbenv/bin
-            rbenv global 2.3.1
-            eval "$(rbenv init -)"
-            bundle exec rake r10k:syntax
-          ''')
-        }
-      }
     }
-  }
-}
 
-stage('Run Spec Tests') {
-  parallel(
-    'linux::profile::spec': {
-      runSpecTests('linux','profile')
-    },
-    'windows::profile::spec': {
-      runSpecTests('windows','profile')
-    },
-    'linux::role::spec': {
-      runSpecTests('linux','role')
-    },
-    'windows::role::spec': {
-      runSpecTests('windows','role')
+    stage ('Check Style - Lint') {
+      sh 'echo $(find . -type f -name "*.pp" \\( -exec /opt/puppetlabs/puppet/bin/puppet-lint --with-filename {} \\; -o -quit \\) 2>&1 ) | grep -v ERROR'
     }
-  )
-}
 
-
-// functions
-def linux(){
-  withEnv(['PATH+EXTRA=/usr/local/bin']) {
-    ansiColor('xterm') {
-      sh(script: '''
-        export PATH=$PATH:$HOME/.rbenv/bin:$HOME/.rbenv/shims
-        echo $PATH
-        sleep $(( ( RANDOM % 10 )  + 1 ))
-        rbenv global 2.3.1
-        gem install bundle
-        rm -f Gemfile.lock
-        bundle install
-        bundle exec rake spec
-      ''')
+    stage ('Check Syntax - Parse') {
+      sh 'echo $(find . -type f -name "*.pp" \\( -exec /opt/puppetlabs/bin/puppet parser validate {} \\; -o -quit \\) 2>&1 ) | grep -v Error'
     }
-  }
-}
 
-def windows(){
-  withEnv(['MODULE_WORKING_DIR=C:/tmp']) {
-    ansiColor('xterm') {
-      sh(script: '''
-        rm -f Gemfile.lock
-        bundle install
-        bundle exec rake spec
-      ''')
+    stage ('Check Compilation - Rspec') {
     }
-  }
-}
 
-def runSpecTests(def platform,def target){
-  node('tse-slave-' + platform) {
-    sshagent (credentials: ['jenkins-seteam-ssh']) {
-      checkout scm
-      dir("site/$target") {
-        "$platform"()
-      }
+    stage ('Check With Fact Data - Onceover') {
     }
-  }
+
+
+    stage ('Authorize deployment') {
+      puppet.credentials 'pe-access-token'
+    }
+
+    stage ('Deploy to production') {
+      puppet.codeDeploy 'production'
+    }
+
+    stage ('Provision Test Node') {
+    }
+
+//    stage ('Deploy change to production') {
+//      puppet.job 'production', query: 'nodes { catalog_environment = "production" }'
+//    }
 }

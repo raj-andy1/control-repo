@@ -13,6 +13,7 @@ class araws::provision (
   $vol_nm = undef,
   $vol_sz = undef,
   $key_nm = 'andy.rajagopalan',
+  $pe_role = undef,
   )
   {
   ec2_instance { "$inst_nm":
@@ -24,24 +25,26 @@ class araws::provision (
     security_groups =>  $secg,
     instance_type =>  $inst_type,
     user_data       => template('araws/agent_pe_userdata.erb'),
-    key_name  => $key_nm ,
+    key_name  => $key_nm,
     tags  =>  {
         name  => 'andy.rajagopalan',
         department  => 'tse',
-        project => 'internal-practice',
+        project => 'self-practice',
         created_by => 'Andy R',
-  },
-  if $add_vol {
-  #add additional disks only if $add_vol = true
-    block_devices => [
-    {
-      device_name           => $vol_nm,
-      volume_size           => $vol_sz,
-      delete_on_termination => 'true',
-      volume_type          => 'gp2',
-      }
-    ]
   }
  }
+ if $add_vol {
+ #add additional disks only if $add_vol = true
+    Ec2_instance <|$inst_nm|> {
+      block_devices => [
+        {
+          device_name           => $vol_nm,
+          volume_size           => $vol_sz,
+          delete_on_termination => 'true',
+          volume_type          => 'gp2',
+        }
+      ]
+    }
+  }
 }
 include araws::provision

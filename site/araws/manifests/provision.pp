@@ -31,11 +31,11 @@ class araws::provision (
         department => 'tse',
         project    => 'self-practice',
         created_by => 'Andy R',
-   }
-  }
- if $add_vol {
+      }
+    }
+    if $add_vol {
  #add additional disks only if $add_vol = true
-    Ec2_instance <|title == $inst_nm|> {
+ Ec2_instance <|title == $inst_nm|> {
       block_devices => [
         {
           device_name           => $vol_nm,

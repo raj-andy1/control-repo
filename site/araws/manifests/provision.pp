@@ -9,7 +9,7 @@ class araws::provision (
   $inst_type = 't2.large',
   $snet = 'tse-us-west-2-avza',
   $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents'],
-  $add_vol = false,
+  $add_vol = true,
   $vol_nm = '/dev/sdb',
   $vol_sz = '8 Gi',
   $key_nm = 'andy.rajagopalan',

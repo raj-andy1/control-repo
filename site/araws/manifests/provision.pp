@@ -32,7 +32,7 @@ class araws::provision (
         project => 'self-practice',
         created_by => 'Andy R',
   }
- }
+ },
  if $add_vol {
  #add additional disks only if $add_vol = true
     Ec2_instance <|$inst_nm|> {

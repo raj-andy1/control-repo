@@ -13,7 +13,7 @@ class araws::provision (
   $vol_nm = undef,
   $vol_sz = undef,
   $key_nm = 'andy.rajagopalan',
-  $pe_role = undef,
+  $pe_role = 'demo-webserver',
   )
   {
   ec2_instance { "$inst_nm":

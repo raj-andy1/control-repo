@@ -1,5 +1,5 @@
 #!groovy
-node('tse-control-repo') {
+node('control-repo') {
   sshagent (credentials: ['jenkins-seteam-ssh']) {
     withEnv(['PATH+EXTRA=/usr/local/bin']) {
       checkout scm

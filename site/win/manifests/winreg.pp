@@ -1,7 +1,7 @@
 # /etc/puppetlabs/code/environments/production/site/win/manifests/winreg.pp
 # Sample code that changes registry values on Windows Machines
 class win::winreg {
-  registry_key { 'HKLM\System\CurrentControlSet\Services\Puppet01':
+  registry_key { "HKLM\System\CurrentControlSet\Services\Puppet01":
   ensure  =>  present,
   }
   registry_value { 'HKLM\System\CurrentControlSet\Services\Puppet01\Description':
@@ -13,5 +13,5 @@ class win::winreg {
  registry::value { 'Description':
   key =>  'HKLM\System\CurrentControlSet\Services\Puppet02',
   data => 'Yahoo101',
- }
+}
 }

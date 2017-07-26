@@ -19,7 +19,7 @@ node {
 
 
     stage ('Authorize deployment') {
-      puppet.credentials 'pe-orch-user'
+      puppet.credentials 'pe-deploy-user'
     }
 
     stage ('Deploy to production') {

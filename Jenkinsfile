@@ -11,6 +11,11 @@ node {
       sh 'echo $(find . -type f -name "*.pp" \\( -exec /opt/puppetlabs/bin/puppet parser validate {} \\; -o -quit \\) 2>&1 ) | grep -v Error'
     }
 
+    stage ('Promote Code to production') {
+      input "Ready to deploy to production"
+      promote from: 'test01', to:'production' 
+    }
+
     stage ('Check Compilation - Rspec') {
     }
 

@@ -70,6 +70,7 @@ class profile::arjenkins {
    'pipeline-stage-tags-metadata'=> { version => '1.1.8'},
    'pipeline-stage-view'=> { version => '2.8'},
    'plain-credentials'=> { version => '1.4'},
+   'promoted-builds' => { version => '2.29'}
    'puppet-enterprise-pipeline'=> { version => '1.3.1'},
    'resource-disposer'=> { version => '0.6'},
    'scm-api'=> { version => '2.2.0'},

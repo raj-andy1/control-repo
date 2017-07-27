@@ -5,12 +5,12 @@ class profile::arjenkins {
 
   package {'git':
     ensure => present,
-  },
+  }
 
   package {'puppet-lint':
     ensure => present,
     provider => gem,
-},
+}
 
   class { 'jenkins':
     plugin_hash => {

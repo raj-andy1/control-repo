@@ -3,6 +3,10 @@
 
 class profile::arjenkins {
 
+  package { 'rubygems':
+  ensure => present,
+  }
+
   package {'git':
     ensure => present,
   }
@@ -10,6 +14,7 @@ class profile::arjenkins {
   package {'puppet-lint':
     ensure => present,
     provider => gem,
+    require => Package['rubygems']
 }
 
   class { 'jenkins':
@@ -81,7 +86,7 @@ class profile::arjenkins {
    'workflow-cps'=> { version => '2.36.1'},
    'workflow-cps-global-lib'=> { version => '2.8'},
    'workflow-durable-task-step'=> { version => '2.12'},
-   'workflow-job'=> { version => '2.13'},
+   'workflow-job'=> { version => '2.12'},
    'workflow-multibranch'=> { version => '2.16'},
    'workflow-scm-step'=> { version => '2.6'},
    'workflow-step-api'=> { version => '2.12'},

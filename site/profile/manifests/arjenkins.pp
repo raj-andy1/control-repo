@@ -88,7 +88,7 @@ class profile::arjenkins {
    'workflow-support'=> { version => '2.14'},
    'ws-cleanup'=> { version => '0.34'},
    'pipeline-stage-step'=> { version => '2.2'},
-   'credentials'=> { version => '2.1.14'},
+   #'credentials'=> { version => '2.1.14'},
    'structs'=> { version => '1.9'},
     }
   }

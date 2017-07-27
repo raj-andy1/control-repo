@@ -17,9 +17,12 @@ node {
     stage ('Check With Fact Data - Onceover') {
     }
 
+    stage ('Promote to production'){
+    promote from: 'test01', to: 'production'
+    }
 
     stage ('Authorize deployment') {
-      puppet.credentials 'pe-access-token'
+      puppet.credentials 'pe-deploy-user'
     }
 
     stage ('Deploy to production') {
@@ -29,7 +32,7 @@ node {
     stage ('Provision Test Node') {
     }
 
-//    stage ('Deploy change to production') {
-//      puppet.job 'production', query: 'nodes { catalog_environment = "production" }'
-//    }
+    stage ('Deploy change to production') {
+     puppet.job 'production', query: 'nodes { catalog_environment = "production" }'
+    }
 }

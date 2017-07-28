@@ -10,8 +10,8 @@ class profile::arjenkins {
   package {"gcc-c++": ensure => present,}
   package {"libxml2-devel": ensure => present,}
   package {"libxslt-devel": ensure => present,}
-  package {"beaker": ensure => present, provider => gem, require => Package['rubygems']}
-  package {"puppet-lint": provider => gem, require => Package['rubygems']}
+  package {"beaker": ensure => present, provider => puppet_gem, require => Package['rubygems']}
+  package {"puppet-lint": provider => puppet_gem, require => Package['rubygems']}
 
   class { 'jenkins':
     plugin_hash => {

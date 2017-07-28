@@ -7,7 +7,7 @@ class profile::arjenkins {
     ensure => present,
   }
 
-  package {'puppet-lint':
+  package {'beaker','puppet-lint':
     ensure => present,
     provider => gem,
     require => Package['rubygems']

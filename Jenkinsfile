@@ -32,10 +32,13 @@ node {
     stage ('Provision Test Node') {
     }
 
+<<<<<<< HEAD
     stage ('Authorize Orcehstration') {
       puppet.credentials 'pe-orch-user'
     }
 
+=======
+>>>>>>> production
     stage ('Deploy change to production') {
      puppet.job 'production', query: 'nodes { catalog_environment = "production" }'
     }

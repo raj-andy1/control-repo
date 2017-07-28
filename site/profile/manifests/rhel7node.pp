@@ -7,4 +7,3 @@ class profile::rhel7node {
   include cis_rhel7
 
 }
-}

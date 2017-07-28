@@ -3,18 +3,15 @@
 
 class profile::arjenkins {
 
-  $pkg_nm = 'rubygems', 'git', 'make', 'gcc', 'gcc-c++', 'libxml2-devel', 'libxslt-devel', 'ruby-devel',
-  $gem_pkg_nm = 'beaker','puppet-lint',
-
-  package {"$pkg_nm":
-    ensure => present,
-  }
-
-  package {"$gem_pkg_nm":
-    ensure => present,
-    provider => gem,
-    require => Package["$pkg_nm"]
-}
+  package {"rubygems": ensure => present,}
+  package {"git": ensure => present,}
+  package {"make": ensure => present,}
+  package {"gcc": ensure => present,}
+  package {"gcc-c++": ensure => present,}
+  package {"$libxml2-devel": ensure => present,}
+  package {"$libxslt-devel": ensure => present,}
+  package {"beaker": ensure => present, provider => gem, require => Package["rubygems"]}
+  package {"puppet-lint": provider => gem, require => Package["rubygems"]}
 
   class { 'jenkins':
     plugin_hash => {

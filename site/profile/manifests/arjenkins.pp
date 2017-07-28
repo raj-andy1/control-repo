@@ -13,7 +13,7 @@ class profile::arjenkins {
   package {"$gem_pkg_nm":
     ensure => present,
     provider => gem,
-    after => Package["$pkg_nm"]
+    require => Package["$pkg_nm"]
 }
 
   class { 'jenkins':

@@ -4,12 +4,13 @@
 class profile::arjenkins {
 
   $pkg_nm = ['rubygems', 'git','make', 'gcc', 'gcc-c++', 'libxml2-devel', 'libxslt-devel', 'ruby-devel']
+  $gem_pkg_nm = ['beaker','puppet-lint']
 
   package {"$pkg_nm":
     ensure => present,
   }
 
-  package {'beaker','puppet-lint':
+  package {"$gem_pkg_nm":
     ensure => present,
     provider => gem,
     require => Package['rubygems']

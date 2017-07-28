@@ -3,7 +3,9 @@
 
 class profile::arjenkins {
 
-  package {'rubygems', 'git','make', 'gcc', 'gcc-c++', 'libxml2-devel', 'libxslt-devel', 'ruby-devel':
+  $pkg_nm = ['rubygems', 'git','make', 'gcc', 'gcc-c++', 'libxml2-devel', 'libxslt-devel', 'ruby-devel']
+
+  package {"$pkg_nm":
     ensure => present,
   }
 

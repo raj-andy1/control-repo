@@ -13,7 +13,7 @@ class araws::provision (
   $vol_nm = '/dev/sdb',
   $vol_sz = '8',
   $key_nm = 'andy.rajagopalan',
-  $pe_role = 'demo-webserver',
+  $pe_role = 'jenkins-master',
   )
   {
   ec2_instance { $inst_nm:

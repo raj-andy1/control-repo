@@ -34,9 +34,9 @@ class araws::provision (
       }
     }
     if $add_vol {
- #add additional disks only if $add_vol = true
- Ec2_instance <|title == $inst_nm|> {
-      block_devices => [
+      #add additional disks only if $add_vol = true
+      Ec2_instance <|title == $inst_nm|> {
+        block_devices => [
         {
           device_name           => $vol_nm,
           volume_size           => $vol_sz,

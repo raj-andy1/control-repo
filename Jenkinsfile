@@ -17,9 +17,9 @@ node {
     stage ('Check With Fact Data - Onceover') {
     }
 
-    stage ('Promote to production'){
+  /*stage ('Promote to production'){
     promote from: 'test01', to: 'production'
-    }
+    }*/
 
     stage ('Authorize deployment') {
       puppet.credentials 'pe-deploy-user'

@@ -10,8 +10,8 @@ class win::winreg {
   data => 'some junk data',
   }
 
- registry::value { 'Description':
+  registry::value { 'Description':
   key =>  'HKLM\System\CurrentControlSet\Services\Puppet02',
   data => 'Yahoo101',
- }
+}
 }

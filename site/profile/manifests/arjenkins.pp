@@ -1,5 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/profile/manifests/arjenkins.pp
-# Sample code to install Jenkins master
+# Sample code to install Jenkins master from scratch
 
 class profile::arjenkins {
 

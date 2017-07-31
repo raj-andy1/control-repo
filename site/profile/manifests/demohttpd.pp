@@ -4,7 +4,7 @@
 class profile::demohttpd
 
 {
-
+  include cis_rhel7
   include arapache
 
 }

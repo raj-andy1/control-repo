@@ -12,7 +12,6 @@ class profile::arjenkins {
   package {"libxslt-devel": ensure => present,}
   package {"beaker": ensure => present, provider => puppet_gem, require => Package['rubygems']}
   package {"puppet-lint": provider => puppet_gem, require => Package['rubygems']}
-  package {"onceover": provider => puppet_gem, require => Package['rubygems']}
 
   class { 'jenkins':
     plugin_hash => {
@@ -44,7 +43,7 @@ class profile::arjenkins {
       'hipchat'=> { version => '2.1.1'},
       'icon-shim'=> { version => '2.0.3'},
       'jackson2-api'=> { version => '2.7.3'},
-      'java-doc' => { version => '1.0'},
+      'javadoc' => { version => '1.4'},
       'jquery-detached'=> { version => '1.2.1'},
       'junit'=> { version => '1.20'},
       'ldap'=> { version => '1.16'},

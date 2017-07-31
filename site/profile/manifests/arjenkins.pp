@@ -1,5 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/profile/manifests/arjenkins.pp
-# Sample code to install Jenkins master from scratch
+# Sample code to install Jenkins master
 
 class profile::arjenkins {
 
@@ -12,6 +12,7 @@ class profile::arjenkins {
   package {"libxslt-devel": ensure => present,}
   package {"beaker": ensure => present, provider => puppet_gem, require => Package['rubygems']}
   package {"puppet-lint": provider => puppet_gem, require => Package['rubygems']}
+  package {"onceover": provider => puppet_gem, require => Package['rubygems']}
 
   class { 'jenkins':
     plugin_hash => {

@@ -32,8 +32,7 @@ node_groups:
   windows_nodes:
     - Windows_Server-2012r2-64
   non_windows_nodes:
-    include: 'all_nodes'
-    exclude: 'windows_nodes'
+    - CentOS-7.0-64
 
 test_matrix:
   - windows_nodes:

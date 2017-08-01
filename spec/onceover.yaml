@@ -1,6 +1,7 @@
 # Classes to be tested, sample
 classes:
-  - role::webserver
+  - profile::arjenkins
+  - profile::arwindemo
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on weather you are running 'spec' or 'acceptance' tests
@@ -23,9 +24,10 @@ node_groups:
     exclude: 'windows_nodes'
 
 test_matrix:
-  - all_nodes:
-      classes: 'all_classes'
+  - windows_nodes:
+      classes:
+        - profile::arwindemo
       tests: 'spec'
   - non_windows_nodes:
       classes: 'all_classes'
-      tests: 'acceptance'
+      tests: 'spec'

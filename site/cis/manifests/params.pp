@@ -71,7 +71,6 @@ class cis::params {
         'openldap-clients',
         'bind',
         'vsftpd',
-        'httpd',
         'samba',
         ]
     }

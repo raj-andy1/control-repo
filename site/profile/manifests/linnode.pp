@@ -13,7 +13,7 @@ class profile::linnode (
   include manage_users::testusers
 
   package {'tcpdump':
-    ensure => '4.5.1-3.el7',
+    ensure => '4.9.0-5.el7',
   }
 
 }

@@ -11,4 +11,7 @@ class profile::demohttpd
   command => '/usr/bin/firewall-cmd --zone=public --permanent --add-service=http',
   creates => '/tmp/fwlhttp',
 }
+
+Class['cis_rhel7'] -> Class['arapache'] -> Exec['Allow HTTP']
+
 }

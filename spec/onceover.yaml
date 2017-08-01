@@ -1,36 +1,28 @@
 # Classes to be tested, sample
 classes:
-  - role::database_server
-  - role::example
   - role::webserver
+  - profile::arjenkins
+  - profile::artomcatapp
+  - profile::rhel7node
+  - profile::winnode
+  - profile::arwindemo
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on weather you are running 'spec' or 'acceptance' tests
 nodes:
-  - AIX-6.1-powerpc
-  - AIX-7.1-powerpc
-  - CentOS-5.11-32
-  - CentOS-5.11-64
-  - CentOS-6.6-32
-  - CentOS-6.6-64
   - CentOS-7.0-64
-  - Debian-6.0.10-32
-  - Debian-6.0.10-64
-  - Debian-7.8-32
-  - Debian-7.8-64
-  - SLES-11.3-64
-  - SLES-12.1-64
-  - solaris-10_u9-sparc-64
-  - solaris-11.2-sparc-64
-  - Ubuntu-12.04-32
-  - Ubuntu-12.04-64
-  - Ubuntu-14.04-32
-  - Ubuntu-14.04-64
-  - Windows_Server-2008r2-64
   - Windows_Server-2012r2-64
 
 # You can group classes here to save typing
 class_groups:
+  windows_classes:
+    - profile::winnode
+    - profile::arwindemo
+  el_classes:
+    - role::webserver
+    - profile::arjenkins
+    - profile::artomcatapp
+    - profile::rhel7node
 
 # You can group nodes here to save typing
 # We have created a 'non_windows_nodes' group because we can't
@@ -45,9 +37,11 @@ node_groups:
     exclude: 'windows_nodes'
 
 test_matrix:
-  - all_nodes:
-      classes: 'all_classes'
-      tests: 'spec'
+  - windows_nodes:
+    classes: 'windows_classes'
   - non_windows_nodes:
-      classes: 'all_classes'
-      tests: 'acceptance'
+    classes: 'el_classes'
+    tests: 'acceptance'
+#  - all_nodes:
+#      classes: 'all_classes'
+#      tests: 'spec'

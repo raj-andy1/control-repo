@@ -7,4 +7,7 @@ class profile::demohttpd
   include cis_rhel7
   include arapache
 
+  exec {'firewall-cmd --zone=public --permanent --add-service=http':
+  creates => '/tmp/fwlhttp',
+}
 }

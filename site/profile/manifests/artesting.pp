@@ -3,6 +3,7 @@
 
 class profile::artesting {
   package {"rubygems": ensure => present,}
+  package {"ruby-devel": ensure => present,}
   package {"mlocate": ensure => present,}
   package {"git": ensure => present,}
   package {"make": ensure => present,}
@@ -13,5 +14,5 @@ class profile::artesting {
   package {"bundler": provider => gem, require => Package['rubygems']}
   package {"beaker": ensure => present, provider => puppet_gem, require => Package['rubygems']}
   package {"puppet-lint": provider => puppet_gem, require => Package['rubygems']}
-  package {"onceover": provider => puppet_gem, require => Package['rubygems']}
+  package {"onceover": provider => gem, require => Package['rubygems']}
 }

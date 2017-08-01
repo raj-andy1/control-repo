@@ -12,6 +12,7 @@ node {
     }
 
     stage ('Check Compilation - Rspec') {
+     sh 'bundle exec onceover run spec'
     }
 
     stage ('Check With Fact Data - Onceover') {

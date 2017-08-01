@@ -12,8 +12,6 @@ class profile::demohttpd
   creates => '/tmp/fwlhttp',
 }
 
-}
-
 Class['cis_rhel7'] -> Class['arapache'] -> Exec['Allow HTTP'] ~> Service['firewalld']
 
 }

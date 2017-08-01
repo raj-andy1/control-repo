@@ -3,6 +3,7 @@
 
 class profile::artesting {
   package {"rubygems": ensure => present,}
+  package {"mlocate": ensure => present,}
   package {"git": ensure => present,}
   package {"make": ensure => present,}
   package {"gcc": ensure => present,}

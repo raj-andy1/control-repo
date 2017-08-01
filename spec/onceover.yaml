@@ -30,7 +30,6 @@ class_groups:
 # we can give you fact sets though so go crazy with spec testing!
 node_groups:
   windows_nodes:
-    - Windows_Server-2008r2-64
     - Windows_Server-2012r2-64
   non_windows_nodes:
     include: 'all_nodes'

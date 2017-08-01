@@ -38,6 +38,6 @@ node {
     }
 
     stage ('Deploy change to production') {
-     puppet.job 'production', query: 'nodes { catalog_environment = "production" }'
+     puppet.job 'production', query: 'nodes { catalog_environment = "production" and deactivated is null }'
     }
 }

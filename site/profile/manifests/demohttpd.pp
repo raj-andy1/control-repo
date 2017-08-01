@@ -14,6 +14,6 @@ class profile::demohttpd
 
 }
 
-Class['cis_rhel7'] -> Class['arapache'] -> Exec['Allow HTTP'] ~>Service['firewalld']
+Class['cis_rhel7'] -> Class['arapache'] -> Exec['Allow HTTP'] ~> Service['firewalld']
 
 }

@@ -3,6 +3,8 @@
 
 class profile::arjenkins {
 
+  include arrvm
+
   yumrepo { 'rhui-REGION-rhel-server-optional':
   enabled => yes,
   }
@@ -25,24 +27,6 @@ class profile::arjenkins {
   package {"gcc-c++": ensure => present,}
   package {"libxml2-devel": ensure => present,}
   package {"libxslt-devel": ensure => present,}
-  package {"bundler": provider => gem,
-  require => [
-  Package['rubygems'],
-  Package['ruby-devel'],
-  ]
-}
-  package {"beaker": ensure => present, provider => gem,
-  require => [ 
-  Package['rubygems'],
-  Package['ruby-devel'],
-  ]
-}
-  package {"onceover": provider => gem,
-  require => [
-  Package['rubygems'],
-  Package['ruby-devel'],
-  ]
-}
   package {"puppet-lint": provider => puppet_gem, require => Package['rubygems']}
 
   class { 'jenkins':

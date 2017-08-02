@@ -13,7 +13,7 @@ node {
 
     stage('Ruby Test 1') {
       // Run ruby tests
-      sh 'PATH=$PATH:/usr/local/rvm/scripts/rvm && rvm use 2.3.1 && which ruby'
+      sh 'PATH=$PATH:/usr/local/rvm/scripts/ && rvm use 2.3.1 && which ruby'
     }
 
     stage('Ruby Test 2') {

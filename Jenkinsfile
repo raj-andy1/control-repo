@@ -11,10 +11,19 @@ node {
       sh 'echo $(find . -type f -name "*.pp" \\( -exec /opt/puppetlabs/bin/puppet parser validate {} \\; -o -quit \\) 2>&1 ) | grep -v Error'
     }
 
+    stage('Install Gems') {
+      // Run the onceover tests
+      sh '''source /usr/local/rvm/scripts/rvm && bundle install --path=.gems --binstubs'''
+    }
 
-
-    stage ('Check Compilation - Rspec') {
-     sh 'PATH=$PATH:/opt/puppetlabs/puppet/bin /opt/puppetlabs/puppet/bin/onceover run spec'
+    stage('Run Onceover Tests') {
+      // Run the onceover tests
+      try {
+        sh '''source /usr/local/rvm/scripts/rvm && ./bin/onceover run spec'''
+      } catch (error) {
+        junit '.onceover/spec.xml'
+        throw error
+      }
     }
 
     stage ('Authorize deployment') {

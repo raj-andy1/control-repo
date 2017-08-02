@@ -7,12 +7,16 @@ class profile::demohttpd
   include cis
   include arapache
 
-  exec {'Allow HTTP':
-  command => '/usr/bin/firewall-cmd --zone=public --permanent --add-service=http',
-  creates => '/tmp/fwlhttp',
-}
+  firewall { '1 allow http access':
+  dport => 80,
+  proto => tcp,
+  action => accept,
 
-Class['cis'] -> Class['arapache'] -> Exec['Allow HTTP']
+  }
+
+
+
+Class['cis'] -> Class['arapache'] -> Firewall['1 allow http access']
 # ~> Service['firewalld']
 
 }

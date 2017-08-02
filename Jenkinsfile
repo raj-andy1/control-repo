@@ -11,8 +11,10 @@ node {
       sh 'echo $(find . -type f -name "*.pp" \\( -exec /opt/puppetlabs/bin/puppet parser validate {} \\; -o -quit \\) 2>&1 ) | grep -v Error'
     }
 
+
+
     stage ('Check Compilation - Rspec') {
-     sh '/opt/puppetlabs/puppet/bin/onceover run spec'
+     sh 'PATH=$PATH:/opt/puppetlabs/puppet/bin /opt/puppetlabs/puppet/bin/onceover run spec'
     }
 
     stage ('Authorize deployment') {

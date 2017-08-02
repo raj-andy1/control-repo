@@ -12,7 +12,7 @@ node {
     }
 
     stage ('Check Compilation - Rspec') {
-     sh 'onceover run spec'
+     sh '/opt/puppetlabs/puppet/bin/onceover run spec'
     }
 
     stage ('Authorize deployment') {

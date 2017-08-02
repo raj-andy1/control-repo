@@ -12,7 +12,7 @@ node {
     }
 
     stage ('Check Compilation - Rspec') {
-     sh '/usr/local/bin/bundle exec onceover run spec'
+     sh 'onceover run spec'
     }
 
     stage ('Authorize deployment') {

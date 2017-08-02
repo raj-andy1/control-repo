@@ -13,7 +13,7 @@ node {
 
     stage('Install Gems') {
       // Run the onceover tests
-      sh '''source /usr/local/rvm/scripts/rvm && bundle install --path=.gems --binstubs'''
+      sh '''source /usr/local/rvm/scripts/rvm && /usr/local/rvm/gems/ruby-2.3.3/bin/bundle install --path=.gems --binstubs'''
     }
 
     stage('Run Onceover Tests') {

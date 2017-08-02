@@ -3,8 +3,21 @@
 
 class profile::arjenkins {
 
+  yumrepo { 'rhui-REGION-rhel-server-optional':
+  enabled => yes,
+  }
+
+  yumrepo { 'rhui-REGION-rhel-server-debug-optional':
+  enabled => yes,
+  }
+
   package {"rubygems": ensure => present,}
-  package {"ruby-devel": ensure => present,}
+  package {"ruby-devel": ensure => present,
+  require => [
+  Yumrepo['rhui-REGION-rhel-server-optional'],
+  Yumrepo['rhui-REGION-rhel-server-debug-optional'],
+  ]
+}
   package {"mlocate": ensure => present,}
   package {"git": ensure => present,}
   package {"make": ensure => present,}
@@ -12,9 +25,24 @@ class profile::arjenkins {
   package {"gcc-c++": ensure => present,}
   package {"libxml2-devel": ensure => present,}
   package {"libxslt-devel": ensure => present,}
-  package {"bundler": provider => gem, require => Package['rubygems']}
-  package {"beaker": ensure => present, provider => gem, require => Package['rubygems']}
-  package {"onceover": provider => gem, require => Package['rubygems']}
+  package {"bundler": provider => gem,
+  require => [
+  Package['rubygems'],
+  Package['ruby-devel'],
+  ]
+}
+  package {"beaker": ensure => present, provider => gem,
+  require => [ 
+  Package['rubygems'],
+  Package['ruby-devel'],
+  ]
+}
+  package {"onceover": provider => gem,
+  require => [
+  Package['rubygems'],
+  Package['ruby-devel'],
+  ]
+}
   package {"puppet-lint": provider => puppet_gem, require => Package['rubygems']}
 
   class { 'jenkins':

@@ -11,6 +11,21 @@ node {
       sh 'echo $(find . -type f -name "*.pp" \\( -exec /opt/puppetlabs/bin/puppet parser validate {} \\; -o -quit \\) 2>&1 ) | grep -v Error'
     }*/
 
+    stage('Ruby Test 1') {
+      // Run ruby tests
+      sh 'which ruby'
+    }
+
+    stage('Ruby Test 2') {
+      // Run ruby tests
+      sh 'which gem'
+    }
+
+    stage('Ruby Test 3') {
+      // Run ruby tests
+      sh 'gem env'
+    }
+
     stage('Install Gems') {
       // Run the onceover tests
       sh '''source /usr/local/rvm/scripts/rvm && /usr/local/rvm/gems/ruby-2.3.3/wrappers/bundle install --path=.gems --binstubs'''

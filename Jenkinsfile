@@ -13,13 +13,13 @@ node {
 
     stage('Install Gems') {
       // Run the onceover tests
-      sh '''source /usr/local/rvm/scripts/rvm && bundle install --path=.gems --binstubs'''
+      sh '''source /usr/local/rvm/scripts/rvm && /usr/local/rvm/gems/ruby-2.3.3/wrappers/bundle install --path=.gems --binstubs'''
     }
 
     stage('Run Onceover Tests') {
       // Run the onceover tests
       try {
-        sh '''source /usr/local/rvm/scripts/rvm && ./bin/onceover run spec'''
+        sh '''source /usr/local/rvm/scripts/rvm && /var/lib/jenkins/jobs/mypuppetcode/workspace@2/bin/onceover run spec'''
       } catch (error) {
         junit '.onceover/spec.xml'
         throw error

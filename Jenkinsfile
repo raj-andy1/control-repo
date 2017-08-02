@@ -13,7 +13,7 @@ node {
 
     stage('Ruby Test 1') {
       // Run ruby tests
-      sh 'SetEnv GEM_HOME /usr/local/rvm/gems/ruby-2.3.3 && which ruby'
+      sh 'source /usr/local/rvm/scripts/rvm && rvm use 2.3.1 && which ruby'
     }
 
     stage('Ruby Test 2') {

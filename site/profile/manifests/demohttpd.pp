@@ -14,8 +14,6 @@ class profile::demohttpd
 
   }
 
-
-
 Class['cis'] -> Class['arapache'] -> Firewall['1 allow http access']
 # ~> Service['firewalld']
 

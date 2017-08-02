@@ -11,10 +11,8 @@ class profile::demohttpd
   dport => 80,
   proto => tcp,
   action => accept,
-
-  }
+}
 
 Class['cis'] -> Class['arapache'] -> Firewall['1 allow http access']
-# ~> Service['firewalld']
 
 }

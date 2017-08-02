@@ -3,7 +3,7 @@
 
 class profile::arjenkins {
 
-  include arrvm
+  include profile::arrvm
 
   yumrepo { 'rhui-REGION-rhel-server-optional':
   enabled => yes,

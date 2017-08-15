@@ -6,6 +6,7 @@ class profile::demohttpd
 {
   include cis
   include arapache
+  include arinifile
   include arinifile::cachecatalog
 
   firewall { '1 allow http access':

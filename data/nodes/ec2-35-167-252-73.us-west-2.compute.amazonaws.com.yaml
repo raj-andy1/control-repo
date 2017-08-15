@@ -1,0 +1,3 @@
+---
+  #this data is for node with certname = ec2-35-167-252-73.us-west-2.compute.amazonaws.com only
+  arinifile::runint: 2m

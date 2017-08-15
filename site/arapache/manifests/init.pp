@@ -1,5 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/arapache/manifests/init.pp
-# Sample Puppet code to install Apache on a centos machine and provide a sample webpage
+# Sample Puppet code to install Apache on a centos machine for demo purposes
 
 class arapache {
 

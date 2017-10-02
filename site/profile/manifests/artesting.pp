@@ -28,5 +28,6 @@ class profile::artesting {
   package {"bundler": provider => gem, require => Package['rubygems']}
   package {"beaker": ensure => present, provider => puppet_gem, require => Package['rubygems']}
   package {"puppet-lint": provider => puppet_gem, require => Package['rubygems']}
+  package {"semantic_puppet": provider => puppet_gem, require => Package['rubygems']}
   package {"onceover": provider => gem, require => Package['rubygems']}
 }

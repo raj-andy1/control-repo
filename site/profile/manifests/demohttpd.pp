@@ -4,7 +4,8 @@
 class profile::demohttpd
 
 {
-  include cis
+  #include cis
+  include cis_rhel7
   include arapache
   include arinifile
   include arinifile::cachecatalog
@@ -15,6 +16,6 @@ class profile::demohttpd
   action => accept,
 }
 
-Class['cis'] -> Class['arapache'] -> Firewall['1 allow http access']
+Class['cis_rhel7'] -> Class['arapache'] -> Firewall['1 allow http access']
 
 }

@@ -2,16 +2,24 @@
 # Sample Puppet code to demonstrate setting up a DHCP server via DSC
 
 class windemo::uc5 {
-  
+
     dsc_windowsfeature { 'DHCP':
       ensure   =>  present,
       dsc_name => 'DHCP',
-    }
+    } ->
 
     dsc_windowsfeature { 'RSAT-DHCP':
       ensure   =>  present,
       dsc_name => 'RSAT-DHCP',
-    }
+    } ->
+
+    exec {'set-dhcp-securitygroups':
+      command => 'netsh dhcp add securitygroups',
+      creates => 'C:\created.txt',
+    } ~>
+
+    service {'DHCP':}
+  } ->
 
     dsc_xDhcpServerScope { 'samplescope':
       ensure => present,

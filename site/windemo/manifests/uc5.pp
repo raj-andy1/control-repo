@@ -5,7 +5,7 @@ class windemo::uc5 {
   {
   dsc_windowsfeature { 'DHCP':
   ensure   =>  present,
-  dsc_name => DHCP,
+  dsc_name => 'DHCP',
   }
 }
 {

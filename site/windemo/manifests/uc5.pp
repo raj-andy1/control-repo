@@ -18,7 +18,7 @@ class windemo::uc5 {
       creates => 'C:\created.txt',
     } ~>
 
-    service {'DHCP':
+    service {'DHCPServer':
   } ->
 
     dsc_xDhcpServerScope { 'samplescope':

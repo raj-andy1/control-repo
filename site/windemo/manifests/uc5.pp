@@ -14,7 +14,7 @@ class windemo::uc5 {
     } ->
 
     exec {'set-dhcp-securitygroups':
-      command => 'netsh dhcp add securitygroups',
+      command => 'C:\Windows\System32\netsh dhcp add securitygroups',
       creates => 'C:\created.txt',
     } ~>
 

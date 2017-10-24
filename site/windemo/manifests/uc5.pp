@@ -2,12 +2,13 @@
 # Sample Puppet code to demonstrate setting up a DHCP server via DSC
 
 class windemo::uc5 {
-
-{
+  {
   dsc_windowsfeature { 'DHCP':
   ensure   =>  present,
   dsc_name => DHCP,
- }
+  }
+}
+{
  dsc_xDhcpServerScope { 'Scope':
      {
        ensure => present,
@@ -19,4 +20,6 @@ class windemo::uc5 {
        dsc_state => 'active',
        dsc_addressfamily => 'ipv4',
      }
+   }
+ }
 }

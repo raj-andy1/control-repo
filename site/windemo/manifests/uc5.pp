@@ -2,7 +2,7 @@
 # Sample Puppet code to demonstrate setting up a DHCP server via DSC
 
 class windemo::uc5 (
-  $windowsfeaturenm = 'DHCP',
+  $windowsfeaturenm = ['DHCP','RSAT-DHCP'],
   )
 {
     dsc_windowsfeature { '$windowsfeaturenm':

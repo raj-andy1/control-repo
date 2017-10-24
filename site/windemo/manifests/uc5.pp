@@ -1,13 +1,16 @@
 # /etc/puppetlabs/code/environments/production/site/windemo/manifests/uc5.pp
 # Sample Puppet code to demonstrate setting up a DHCP server via DSC
 
-class windemo::uc5 (
-  $windowsfeaturenm = ['DHCP','RSAT-DHCP'],
-  )
-{
-    dsc_windowsfeature { '$windowsfeaturenm':
+class windemo::uc5 {
+  
+    dsc_windowsfeature { 'DHCP':
       ensure   =>  present,
-      dsc_name => $windowsfeaturenm,
+      dsc_name => 'DHCP',
+    }
+
+    dsc_windowsfeature { 'RSAT-DHCP':
+      ensure   =>  present,
+      dsc_name => 'RSAT-DHCP',
     }
 
     dsc_xDhcpServerScope { 'samplescope':

@@ -17,7 +17,7 @@ class windemo::uc5 {
 # Add DHCP Security groups
     exec {'set-dhcp-securitygroups':
       command => 'C:\windows\system32\netsh.exe dhcp add securitygroups',
-      unless => 'C:\windows\system32\net.exe localgroup "DHCP Administrators"', #Run only if the "DHCP Administrators" group has not been added
+      unless => 'C:\windows\system32\net.exe localgroup "DHCP Administrators"', #Run only if the "DHCP Administrators" local group does not exist
     } ~>
 # Restart DHCP Service after adding the DHCP Security groups to complete the installation process
     service {'DHCPServer':

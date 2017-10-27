@@ -1,7 +1,8 @@
 # /etc/puppetlabs/code/environments/production/site/windemo/manifests/uc5.pp
 # Sample Puppet code to demonstrate setting up a DHCP server via DSC
 
-class windemo::uc5 {
+class windemo::uc5 (
+  )
 
 #install DHCP Server feature
     dsc_windowsfeature { 'DHCP':

@@ -7,5 +7,6 @@ class windhcp::dhcpint {
       ensure => present,
       type   => dword,
       data   => '0',
+    }
   }
 }

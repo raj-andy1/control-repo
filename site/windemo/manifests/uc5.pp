@@ -3,7 +3,7 @@
 
 class windemo::uc5 (
   )
-
+{
 #install DHCP Server feature
     dsc_windowsfeature { 'DHCP':
       ensure   =>  present,

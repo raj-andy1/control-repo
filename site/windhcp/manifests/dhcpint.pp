@@ -3,7 +3,7 @@
 
 class windhcp::dhcpint {
   $::interface_guids.each | $key, $value| {
-    registry_value { "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Tcpip\Parameters\Interfaces\{${value}}\EnableDHCP":
+    registry_value { "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{${value}}\EnableDHCP":
       ensure => present,
       type   => 'dword',
       data   => '0',

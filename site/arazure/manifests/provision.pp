@@ -12,3 +12,4 @@ class arazure::provision {
   resource_group => 'testresacc01',
 }
 }
+include arazure::provision

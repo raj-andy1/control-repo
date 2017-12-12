@@ -8,7 +8,7 @@ class arlvmsetup {
         physical_volumes => '/dev/xvdb' ,
         logical_volumes  => {
           'nfsshare' => {
-            'size'              =>  $::disks.xvdb.size,
+            'size'              =>  ::disks.xvdb.size,
             'mountpath'         => '/var/nfsshare',
           },
         },

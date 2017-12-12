@@ -7,9 +7,9 @@ class arlvmsetup {
       'myvg' => {
         physical_volumes => '/dev/xvdb' ,
         logical_volumes  => {
-          'yah' => {
+          'nfsshare' => {
             'size'              =>  $::disks.xvdb.size,
-            'mountpath'         => '/yah',
+            'mountpath'         => '/var/nfsshare',
           },
         },
       },

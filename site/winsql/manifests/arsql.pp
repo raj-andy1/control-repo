@@ -6,6 +6,7 @@ class winsql::arsql {
     features  => ['SQL'],
     source  =>  'X:\\',
     sql_sysadmin_accounts => ['myuser'],
+    require => Class['winsql::armount']
   }
 
 }

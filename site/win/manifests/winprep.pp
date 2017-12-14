@@ -8,6 +8,10 @@ class win::winprep {
     provider => 'chocolatey',
   }
 
+  windows {'NET-Framework-Core':
+    ensure => present,
+}
+
   reboot { 'after':
     message   => 'DSC has requested a reboot',
     subscribe => Package['powershell'],

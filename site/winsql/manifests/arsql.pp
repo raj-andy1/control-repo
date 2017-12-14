@@ -2,6 +2,10 @@
 # Sample code to install MS SQL Server
 
 class winsql::arsql {
-
+  sqlserver_instance { 'MSSQLSERVER':
+    features  => ['SQL'],
+    source  =>  'X:\\',
+    sql_sysadmin_accounts => ['myuser'],
+  }
 
 }

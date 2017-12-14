@@ -3,8 +3,4 @@
 
 
 class winsql {
-  include winsql::arsql
-  include winsql::armount
-
-  Class ['winsql::armount'] -> Class ['winsql::arsql']
 }

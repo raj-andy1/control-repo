@@ -4,4 +4,5 @@
 class profile::winnode {
   include chocolatey
   include win::winprep
+  include windemo::uc2
 }

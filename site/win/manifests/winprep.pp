@@ -8,7 +8,7 @@ class win::winprep {
     provider => 'chocolatey',
   }
 
-  windows {'NET-Framework-Core':
+  windowsfeature {'NET-Framework-Core':
     ensure => present,
 }
 

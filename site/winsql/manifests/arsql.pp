@@ -5,7 +5,7 @@ class winsql::arsql {
   include winsql::armount
 
   sqlserver_instance { 'MSSQLSERVER':
-    features  => ['SQL'],
+  features  => ['SQL'],
   source  =>  'X:\\',
   sql_sysadmin_accounts => ['test-user01'],
   require => Class['winsql::armount'],

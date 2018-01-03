@@ -4,6 +4,8 @@
 
 class profile::arrazorserver () {
 
+  include ::pe_razor
+
   service {'firewalld':
     ensure => stopped,
     enable => false,
@@ -12,6 +14,5 @@ class profile::arrazorserver () {
   class { selinux:
     mode => 'enforcing',
     type => 'targeted',
-}
-
+  }
 }

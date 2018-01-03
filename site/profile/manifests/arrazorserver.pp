@@ -4,7 +4,7 @@
 
 class profile::arrazorserver () {
 
-  include ::pe_razor
+  include pe_razor
 
   service {'firewalld':
     ensure => stopped,

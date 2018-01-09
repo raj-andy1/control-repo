@@ -48,9 +48,9 @@ file { '/var/lib/tftpboot':
     content => $razor_content,
     notify  => Service['dnsmasq'],
 }
--> file { '/etc/dnsmasq.d/dhcp':
+-> file { '/etc/dnsmasq.conf':
     ensure  => 'file',
-    content => $dnsmasq_dhcp_content,
+    source  =>  'puppet:///modules/arrazor/dnsmasq.conf',
     notify  => Service['dnsmasq'],
 }
 -> service { 'dnsmasq':

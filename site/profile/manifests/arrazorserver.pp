@@ -12,9 +12,3 @@ class profile::arrazorserver () {
     ensure => stopped,
     enable => false,
   }
-
-  class { selinux:
-    mode => 'disabled',
-    type => 'targeted',
-  }
-}

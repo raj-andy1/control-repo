@@ -8,6 +8,10 @@ class arrazor::client {
     ensure => present,
   }
 
+  package {'wget':
+  ensure => present,
+  }
+
   package { 'pe-razor-client':
     ensure   => 'present',
     provider => gem,

@@ -2,9 +2,7 @@
 # Puppet code to configure a razor server
 
 
-class profile::arrazorserver (
-  pe_razor::enable_smb_share = 'true',
-  ) {
+class profile::arrazorserver () {
 
   include pe_razor
   include arrazor::client

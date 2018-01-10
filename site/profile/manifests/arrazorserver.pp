@@ -12,3 +12,4 @@ class profile::arrazorserver () {
     ensure => stopped,
     enable => false,
   }
+}

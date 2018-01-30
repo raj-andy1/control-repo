@@ -7,7 +7,7 @@ class araws::provision (
   $avza = 'us-west-2a',
   $img_id = 'ami-b55a51cc',
   $inst_type = 't2.large',
-  $snet = 'tse-subnet-avza-1',
+  $snet = 'tse-us-west-2-avza',
   $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents'],
   $add_vol = false,
   $vol_nm = '/dev/sdb',

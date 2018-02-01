@@ -2,6 +2,7 @@
 # Sample code to provision AWS instances
 
 class araws::provision (
+  $pe_master = 'ec2-54-186-186-20.us-west-2.compute.amazonaws.com',
   $inst_nm = 'AndyR - Jenkins Server',
   $aws_region = 'us-west-2',
   $avza = 'us-west-2a',

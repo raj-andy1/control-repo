@@ -3,4 +3,4 @@
 PE_MASTER='ec2-54-186-186-20.us-west-2.compute.amazonaws.com'
 PE_CERTNAME=$(curl -s http://169.254.169.254/latest/meta-data/public-hostname)
 
-curl -k https://$PE_MASTER:8140/packages/current/install.bash | bash -s agent:certname=$PE_CERTNAME extension_requests:pp_role=<%=@pe_role%>
+curl -k https://<%=@pe_master%>:8140/packages/current/install.bash | bash -s agent:certname=$PE_CERTNAME extension_requests:pp_role=<%=@pe_role%>

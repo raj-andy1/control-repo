@@ -2,5 +2,5 @@
 # Sample class for configuring windows autoupdate settings
 
 class profile::arwinautoupdate {
-  class { 'windows_autoupdate': NoAutoUpdate => '1' }
+  class { 'windows_autoupdate': no_auto_update => '1' }
 }

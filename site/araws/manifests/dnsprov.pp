@@ -2,10 +2,10 @@
 # Sample code to create DNS A records
 
 class araws::dnsprov {
-  create_resources(
   route53_a_record {'demoagent03.armusings.info.':
     ensure  => present,
+    ttl => '300',
     values  => ['54.212.230.58'],
-    zone => 'armusings.info.'
-  } )
+    zone => 'armusings.info.',
+  }
 }

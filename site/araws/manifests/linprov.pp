@@ -10,7 +10,7 @@ class araws::linprov (
   $inst_type = 't2.large',
   $snet = 'tse-us-west-2-avza',
   $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents'],
-  $iam_instance_profile_arn = 'arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess',
+  $iam_ip_arn = 'arn:aws:iam::610189707431:instance-profile/IAM_DNS_Role',
   $add_vol = false,
   $vol_nm = '/dev/sdb',
   $vol_sz = '8',
@@ -26,6 +26,7 @@ class araws::linprov (
     subnet            =>  $snet,
     security_groups   =>  $secg,
     instance_type     =>  $inst_type,
+    iam_instance_profile_arn => $iam_ip_arn,
     user_data         => template('araws/agent_pe_userdata.erb'),
     key_name          => $key_nm,
     tags              =>  {

@@ -10,6 +10,7 @@ class araws::linprov (
   $inst_type = 't2.large',
   $snet = 'tse-us-west-2-avza',
   $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents'],
+  $iam_instance_profile_arn = 'arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess',
   $add_vol = false,
   $vol_nm = '/dev/sdb',
   $vol_sz = '8',

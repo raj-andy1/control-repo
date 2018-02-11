@@ -2,7 +2,7 @@
 # Sample code to create DNS A records
 
 class araws::dnsprov {
-  route53_a_record {"$linprov::inst_nm.":
+  route53_a_record {"$linprov::inst_nm.armusings.info.":
     ensure  => present,
     ttl => '300',
     values  => ["$::ec2_publicip"],

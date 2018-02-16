@@ -9,7 +9,7 @@ class araws::dnsprov {
   route53_a_record {"${trusted[extensions][pp_hostname]}.":
   ensure => present,
   ttl    => '300',
-  values => ["${ec2_metadata[public-ipv4]}"],
+  values => ["${::ec2_metadata[public-ipv4]}"],
   zone   => 'armusings.info.',
   }
 }

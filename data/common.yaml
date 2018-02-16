@@ -5,4 +5,4 @@
   profile::linnode::linnodenfsnm: andyr-demonfs
   profile::linnode::ntpservernm: ['nist-time-server.eoni.com']
   arinifile::runint: 10d
-  puppet_enterprise::console_host: puppetmaster01.armusings.info
+  puppet_enterprise::profile::console::proxy:server_name: puppetmaster01.armusings.info

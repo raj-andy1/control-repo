@@ -5,6 +5,3 @@
   profile::linnode::linnodenfsnm: andyr-demonfs
   profile::linnode::ntpservernm: ['nist-time-server.eoni.com']
   arinifile::runint: 10d
-  puppet_enterprise::profile::console::proxy:trapperkeeper_proxy_listen_address: puppetmaster01.armusings.info
-  puppet_enterprise::profile::console::proxy:server_name: puppetmaster01.armusings.info
-  puppet_enterprise::profile::console::proxy::http_redirect:server_name: puppetmaster01.armusings.info

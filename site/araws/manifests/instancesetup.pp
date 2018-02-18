@@ -11,6 +11,6 @@ class araws::instancesetup () {
 
   package { 'retries':
   ensure => present,
-  provide => puppet_gem,
+  provider => puppet_gem,
   }
 }

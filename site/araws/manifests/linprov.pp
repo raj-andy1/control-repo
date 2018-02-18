@@ -2,7 +2,7 @@
 # Sample code to provision an AWS instance running RHEL
 
 class araws::linprov (
-  $pe_master = 'puppetmaster01.armusings.info'
+  $pe_master = 'puppetmaster01.armusings.info',
   #'ec2-54-186-186-20.us-west-2.compute.amazonaws.com',
   $inst_nm = 'AndyR - Jenkins Server',
   $aws_region = 'us-west-2',

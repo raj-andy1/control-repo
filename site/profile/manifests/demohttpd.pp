@@ -11,8 +11,8 @@ class profile::demohttpd
   include arinifile::cachecatalog
 
   firewall { '1 allow http access':
-  dport => 80,
-  proto => tcp,
+  dport  => 80,
+  proto  => tcp,
   action => accept,
 }
 

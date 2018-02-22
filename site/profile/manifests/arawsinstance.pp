@@ -5,6 +5,6 @@ class profile::arawsinstance {
 
   include araws::instancesetup
   include araws::dnsprov
-  
+
   Class['araws::instancesetup'] -> Class['araws::dnsprov']
 }

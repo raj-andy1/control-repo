@@ -1,5 +1,5 @@
-#
-#
+# /etc/puppetlabs/code/environments/production/site/windemo/manifests/uc6.pp
+# Sample Puppet code to demonstrate enabling/disabling RDP
 
 class windemo::uc6 {
 

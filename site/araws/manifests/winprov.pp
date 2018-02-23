@@ -6,7 +6,7 @@ class araws::winprov (
   $inst_nm = 'AndyR - Jenkins Server',
   $aws_region = 'us-west-2',
   $avza = 'us-west-2a',
-  $img_id = 'ami-b55a51cc',
+  $img_id = 'ami-afe051d7', #Windows_Server-2012-R2_RTM-English-64Bit-Base-2018.01.12
   $inst_type = 't2.large',
   $snet = 'tse-us-west-2-avza',
   $secg = ['tse-us-west-2-crossconnect','tse-us-west-2-agents'],
@@ -25,7 +25,7 @@ class araws::winprov (
     subnet            =>  $snet,
     security_groups   =>  $secg,
     instance_type     =>  $inst_type,
-    user_data         => template('araws/agent_pe_userdata.erb'),
+    user_data         => template('araws/windows_agent_pe_userdata'),
     key_name          => $key_nm,
     tags              =>  {
         name       => 'andy.rajagopalan',

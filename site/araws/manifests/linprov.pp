@@ -28,7 +28,7 @@ class araws::linprov (
     security_groups   =>  $secg,
     instance_type     =>  $inst_type,
     iam_instance_profile_arn => $iam_ip_arn,
-    user_data         => template('araws/agent_pe_userdata.erb'),
+    user_data         => template('araws/linux_agent_pe_userdata.erb'),
     key_name          => $key_nm,
     tags              =>  {
         name       => 'andy.rajagopalan',

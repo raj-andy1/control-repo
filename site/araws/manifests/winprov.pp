@@ -27,7 +27,7 @@ class araws::winprov (
     security_groups   =>  $secg,
     instance_type     =>  $inst_type,
     iam_instance_profile_arn => $iam_ip_arn,
-    user_data         => template('araws/windows_agent_pe_userdata'),
+    user_data         => template('araws/windows_agent_pe_userdata.erb'),
     key_name          => $key_nm,
     tags              =>  {
         name       => 'andy.rajagopalan',

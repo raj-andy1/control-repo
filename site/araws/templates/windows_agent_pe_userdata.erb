@@ -1,6 +1,6 @@
 <powershell>
 
-[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webClient = New-Object System.Net.WebClient; $webClient.DownloadFile('https://ec2-54-186-186-20.us-west-2.compute.amazonaws.com:8140/packages/current/install.ps1', 'install.ps1'); .\install.ps1
+[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webClient = New-Object System.Net.WebClient; $webClient.DownloadFile('https://<%=@pe_master%>:8140/packages/current/install.ps1', 'install.ps1'); .\install.ps1 agent:certname=<%=@inst_nm%> extension_requests:pp_role=<%=@pe_role%> extension_requests:pp_hostname=<%=@inst_nm%>
 
 </powershell>
 

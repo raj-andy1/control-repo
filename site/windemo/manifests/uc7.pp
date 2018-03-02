@@ -2,7 +2,7 @@
 # Sample Puppet code to demonstrate installation of packages from a share
 
 class windemo::uc7 {
-  file {'C:\Windows\Temp':
+  file {'C:\Windows\Temp\ChromeSetup.exe':
   ensure => file,
   source => 'puppet:///ar/ChromeSetup.exe',
 

@@ -5,7 +5,7 @@
 class araws::instancesetup () {
 
   package { 'aws-sdk':
-  ensure => present, 
+  ensure => present,
   provider => puppet_gem,
   }
 

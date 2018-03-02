@@ -9,7 +9,7 @@ class windemo::uc7 {
   }
   package {'Chrome':
   ensure => installed,
-  source => 'C:\Windows\Temp',
+  source => 'C:\Windows\Temp\ChromeSetup.exe',
   install_options => ['/VERYSILENT'],
   }
 }

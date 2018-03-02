@@ -10,6 +10,6 @@ class windemo::uc7 {
   package {'Google Chrome':
   ensure => installed,
   source => 'C:\Windows\Temp\GoogleChromeStandaloneEnterprise64.msi',
-  install_options => ['/SILENT'],
+  install_options => ['/quiet'],
   }
 }

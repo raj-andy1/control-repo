@@ -8,7 +8,7 @@ class profile::arcifsmount (
 
 { 
   package { 'cifs-utils':
-    ensure => 'present.'
+    ensure => 'present'
   } ->
 
 mount { '/ar':

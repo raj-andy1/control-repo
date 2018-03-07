@@ -14,7 +14,7 @@ class profile::arcifsmount (
 mount { '/ar':
 ensure => mounted,
 device => '//ar-win-1/ar',
-options => 'user=test-user01,pass="Puppetlabs01"',
+options => 'user="test-user01",pass="Puppetlabs01"',
 fstype => 'cifs',
   }
 }

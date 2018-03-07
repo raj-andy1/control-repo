@@ -1,3 +1,4 @@
 #!/bin/bash
 
-curl -k https://<%=@pe_master%>:8140/packages/current/install.bash | bash -s agent:certname=<%=@inst_nm%> extension_requests:pp_role=<%=@pe_role%> extension_requests:pp_hostname=<%=@inst_nm%>
+#curl -k https://<%=@pe_master%>:8140/packages/current/install.bash | bash -s agent:certname=<%=@inst_nm%> extension_requests:pp_role=<%=@pe_role%> extension_requests:pp_hostname=<%=@inst_nm%>
+curl -k https://<%=@pe_master%>:8140/packages/current/install.bash | bash -s extension_requests:pp_role=<%=@pe_role%> extension_requests:pp_hostname=<%=@inst_nm%>

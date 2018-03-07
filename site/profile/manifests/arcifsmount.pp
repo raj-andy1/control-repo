@@ -16,7 +16,7 @@ device => '//ar-win-1/ar',
 atboot => true,
 ensure => mounted,
 fstype => 'cifs',
-options => 'auto,user=test-user01,pass="Puppetlabs01"'
+options => 'auto,username=test-user01,pass="Puppetlabs01"'
   }
 }
 

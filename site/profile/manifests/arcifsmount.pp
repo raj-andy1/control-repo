@@ -12,11 +12,10 @@ class profile::arcifsmount (
   } ->
 
 mount { '/ar':
-device => '//ar-win-1/ar',
-atboot => true,
 ensure => mounted,
+device => '//ar-win-1/ar',
+options => 'user=test-user01,pass="Puppetlabs01"',
 fstype => 'cifs',
-options => 'user=test-user01,pass="Puppetlabs01"'
   }
 }
 

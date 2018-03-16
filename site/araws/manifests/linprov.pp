@@ -2,8 +2,7 @@
 # Sample code to provision an AWS instance running RHEL
 
 class araws::linprov (
-  $pe_master = 'puppetmaster01.armusings.info',
-  #'ec2-54-186-186-20.us-west-2.compute.amazonaws.com',
+  $pe_master = 'ec2-54-186-186-20.us-west-2.compute.amazonaws.com',
   $inst_nm = 'AndyR - Jenkins Server',
   $aws_region = 'us-west-2',
   $avza = 'us-west-2a',
@@ -35,6 +34,7 @@ class araws::linprov (
         department => 'tse',
         project    => 'self-practice',
         created_by => 'Andy R',
+        lifetime => '1d',
       }
     }
     if $add_vol {

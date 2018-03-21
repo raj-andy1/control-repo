@@ -7,7 +7,7 @@ class windemo::uc8 {
   source => 'puppet:///ar/Windows exe/npp.7.5.5.Installer.x64.exe',
 
   }
-  package {'Notepad++':
+  package {'Notepad++ (64-bit x64)':
   ensure => installed,
   source => 'C:\Windows\Temp\npp.7.5.5.Installer.x64.exe',
   install_options => ['/S'],

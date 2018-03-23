@@ -3,7 +3,7 @@
 
 class arinifile (
   $pathnm = $facts['operatingsystem'] ? {
-    'windows' => "C:\\ProgramData\\PuppetLabs\\puppet\\etc\\puppet.conf",
+    'windows' => 'C:/ProgramData/PuppetLabs/puppet/etc/puppet.conf',
     'default' => '/etc/puppetlabs/puppet/puppet.conf',
   },
   $runint,

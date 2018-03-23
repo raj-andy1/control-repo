@@ -5,8 +5,8 @@
 set -ex
 host_name=$(hostname)
 master_ip=10.32.166.66
-master_name=ar-pe-master01.localdomain
-agent_url="https://"$master_name":8140/packages/current/install.bash"
+master_name=ar-pe-master01
+agent_url="https://"$master_name".localdomain:8140/packages/current/install.bash"
 echo $master_ip $master_name.localdomain  $master_name >> /etc/hosts
 echo $(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)  $host_name  >> /etc/hosts
 curl -k $agent_url | bash -s extension_requests:pp_role=demo-webserver extension_requests:pp_created_by=AndyR extension_requests:pp_department=TSE

@@ -4,7 +4,8 @@
 class arinifile (
   $pathnm = $::operatingsystem ? {
     'windows' => 'C:/ProgramData/PuppetLabs/puppet/etc/puppet.conf',
-    /(CentOS|RedHat)/ => '/etc/puppetlabs/puppet/puppet.conf',
+    default => '/etc/puppetlabs/puppet/puppet.conf',
+    #/(CentOS|RedHat)/ => '/etc/puppetlabs/puppet/puppet.conf',
   },
   $runint = '3600s',
   )

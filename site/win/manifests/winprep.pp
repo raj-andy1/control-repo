@@ -3,9 +3,15 @@
 
 class win::winprep {
 
-  package {['firefox','powershell']:
+  package {'powershell':
     ensure   => latest,
     provider => 'chocolatey',
+  }
+
+
+  package {'Mozilla Firefox 59.0.1 (x64 en-US)':
+  ensure => '59.0.1',
+  provider => 'chocolatey',
   }
 
   windowsfeature {'NET-Framework-Core':

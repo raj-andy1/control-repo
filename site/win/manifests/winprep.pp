@@ -9,7 +9,7 @@ class win::winprep {
   }
 
 
-  package {'Mozilla Firefox 59.0.1 (x64 en-US)':
+  package {'Mozilla Firefox 59.0.1':
   ensure => installed,
   provider => 'chocolatey',
   }

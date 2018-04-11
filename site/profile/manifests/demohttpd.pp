@@ -14,6 +14,6 @@ class profile::demohttpd
   action => accept,
 }
 
-Class['cis_rhel7'] -> Class['arapache'] -> Firewall['1 allow http access']
+Class['arcis_rhel7'] -> Class['arapache'] -> Firewall['1 allow http access']
 
 }

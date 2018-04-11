@@ -5,7 +5,7 @@ class profile::demohttpd
 
 {
   #include cis
-  include cis_rhel7
+  include arcis_rhel7
   include arapache
 
   firewall { '1 allow http access':

@@ -34,7 +34,7 @@ class araws::linprov (
         department => 'tse',
         project    => 'self-practice',
         created_by => 'Andy R',
-        lifetime => '1d',
+        lifetime => '1w',
       }
     }
     if $add_vol {

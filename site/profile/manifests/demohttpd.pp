@@ -7,8 +7,6 @@ class profile::demohttpd
   #include cis
   include cis_rhel7
   include arapache
-  include arinifile
-  include arinifile::cachecatalog
 
   firewall { '1 allow http access':
   dport  => 80,

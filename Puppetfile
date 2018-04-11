@@ -59,3 +59,5 @@ mod 'puppet-selinux', '1.5.0'
 mod 'puppet-windows_autoupdate', '2.0.0'
 mod 'puppetlabs-wsus_client', '1.0.3'
 mod 'puppet-windows_firewall', '2.0.0'
+mod 'cis_rhel7',
+    :git => https://github.com/raj-andy1/perfecto25-cis_rhel7

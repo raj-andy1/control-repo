@@ -69,8 +69,8 @@ $services = [   'chargen-dgram %Disable chargen-dgram %2.1.12',
 # Rule 3.8
 $nfs_services = ['nfslock','rpcgssd','rpcbind','rpcidmapd','rpcsvcgssd']
 
-# Rule 3.9
-$servers = ['3.9,bind','3.10,vsftpd','3.11,httpd','3.12,dovecot','3.13,samba','3.14,squid','3.15,net-snmp']
+# Rule 3.9, removed '3.11,httpd'
+$servers = ['3.9,bind','3.10,vsftpd','3.12,dovecot','3.13,samba','3.14,squid','3.15,net-snmp']
 
 # Rule 5.1
 $contents = [ 'auth,user.* /var/log/messages',

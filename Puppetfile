@@ -61,3 +61,5 @@ mod 'puppetlabs-wsus_client', '1.0.3'
 mod 'puppet-windows_firewall', '2.0.0'
 mod 'cis_rhel7',
     :git => 'https://github.com/raj-andy1/cis_rhel7'
+mod 'puppet-gcloudsdk',
+    :git => 'https://github.com/raj-andy1/puppet-gcloudsdk'

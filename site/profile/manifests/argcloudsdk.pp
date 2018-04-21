@@ -2,5 +2,5 @@
 # Sample code to install gcloudsdk
 
 class profile::argcloudsdk {
-  include gcloudsk
+  include gcloudsdk
 }

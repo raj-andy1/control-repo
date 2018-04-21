@@ -5,6 +5,11 @@ class windemo::uc8 {
   file {'C:\Windows\Temp\npp.7.5.5.Installer.x64.exe':
   ensure => file,
   source => 'puppet:///ar/Windows exe/npp.7.5.5.Installer.x64.exe',
-}
-  ensure_packages(['Notepad++ (64-bit x64)'],{'ensure' => 'present', 'source' => 'C:\Windows\Temp\npp.7.5.5.Installer.x64.exe', 'require' => File['C:\Windows\Temp\npp.7.5.5.Installer.x64.exe'],'install_options' => ['/S'],})
+
+  }
+  package {'Notepad++ (64-bit x64)':
+  ensure => installed,
+  source => 'C:\Windows\Temp\npp.7.5.5.Installer.x64.exe',
+  install_options => ['/S'],
+  }
 }

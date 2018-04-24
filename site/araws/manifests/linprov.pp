@@ -30,10 +30,9 @@ class araws::linprov (
     user_data         => template('araws/linux_agent_pe_userdata.erb'),
     key_name          => $key_nm,
     tags              =>  {
-        name       => 'andy.rajagopalan',
         department => 'tse',
         project    => 'self-practice',
-        created_by => 'Andy R',
+        created_by => 'andyr@puppet.com',
         lifetime => '1w',
       }
     }

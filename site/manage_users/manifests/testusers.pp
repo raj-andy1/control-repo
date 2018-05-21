@@ -12,6 +12,7 @@ class manage_users::testusers {
 
   group { $groupnm:
     ensure  =>  present,
+    before => User[$usernm]
 
     }
 }

@@ -16,5 +16,6 @@ class manage_users {
     }
   group {'wordpress':
     ensure  => present,
+    before => User['cmsuser','wordpress']
   }
 }

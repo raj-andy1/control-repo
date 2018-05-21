@@ -4,7 +4,7 @@
 class manage_users {
   user {'cmsuser':
     ensure   =>  present,
-    groups   =>  wheel,
+    groups   =>  wordpress,
     comment  =>  'This is a test user for managing CMS',
     password =>  '$1$D6CTx5Rl$F5LoY3.IXfTQX2cr27gIT1',
       }

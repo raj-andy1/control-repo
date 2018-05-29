@@ -59,7 +59,8 @@ mod 'puppet-windows_autoupdate', '2.0.0'
 mod 'puppetlabs-wsus_client', '1.0.3'
 mod 'puppet-windows_firewall', '2.0.0'
 mod 'puppet-archive', '3.0.0'
-mod 'cis_rhel7',
-    :git => 'https://github.com/raj-andy1/cis_rhel7'
+mod 'abuxton-cis_benchmarks', '0.1.15'
+#mod 'cis_rhel7',
+#   :git => 'https://github.com/raj-andy1/cis_rhel7'
 mod 'gcloudsdk',
     :git => 'https://github.com/raj-andy1/gcloudsdk'

@@ -64,3 +64,4 @@ mod 'abuxton-cis_benchmarks', '0.1.15'
 #   :git => 'https://github.com/raj-andy1/cis_rhel7'
 mod 'gcloudsdk',
     :git => 'https://github.com/raj-andy1/gcloudsdk'
+mod 'puppet-letsencrypt', '2.3.0'

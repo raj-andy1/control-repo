@@ -3,8 +3,8 @@
 
 class profile::testtrustedfact {
   if $trusted['extensions']['erp_sendmail_internal'] {
-    notice ('Trusted fact is present') }
+    notice ("Trusted fact is present") }
   else {
-    notice ('NOT PRESENT')
+    notice ("NOT PRESENT")
   }
 }

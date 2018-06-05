@@ -1,10 +1,10 @@
 # /etc/puppetlabs/code/environments/production/site/profile/manifests/testtrustedfact.pp
 # Sample code to use the puppet agent module to test a trusted fact
 
-class profile::testtrustedfact{
+class profile::testtrustedfact {
   if $facts['trusted']['extension']['erp_sendmail_internal'] {
-  notice {'Trusted fact is present'} }
+    notice {'Trusted fact is present'} }
   else {
-    notice{'NOT PRESENT'}
+    notice {'NOT PRESENT'}
   }
 }

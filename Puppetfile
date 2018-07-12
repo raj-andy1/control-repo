@@ -67,3 +67,6 @@ mod 'windhcp',
 mod 'gcloudsdk',
     :git => 'https://github.com/raj-andy1/gcloudsdk'
 mod 'puppet-letsencrypt', '2.3.0'
+mod 'autostructure-harden_windows_server', '0.1.22'
+mod 'ayohrling-local_security_policy', '0.6.2'
+mod 'jonono-auditpol', '0.1.2'

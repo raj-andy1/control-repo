@@ -1,5 +1,5 @@
 # /etc/puppetlabs/code/environments/production/site/windemo/manifests/uc9.pp
-# Sample Puppet code to see if a package is installed
+# Sample Puppet code to implement CIS benchmarks on windows
 
 class windemo::uc9 ()
 

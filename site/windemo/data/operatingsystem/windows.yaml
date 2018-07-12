@@ -2,6 +2,7 @@
 #Data for nodes running Windows
 
   windemo::uc3::domainnm: andyr.corp
-  windemo::uc3::domainusernm: Yahoo!01
+  windemo::uc3::domainusernm: Administrator
+  windemo::uc3::domainpasswd:Yahoo!01
   windemo::uc3::ounm: OU=PuppetUsers,DC=andyr,DC=corp
   windemo::uc4::windowsfeaturenm: Web-Server

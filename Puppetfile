@@ -62,7 +62,7 @@ mod 'puppet-archive', '3.0.0'
 mod 'abuxton-cis_benchmarks', '0.1.15'
 mod 'windhcp',
     :git => 'https://github.com/raj-andy1/windhcp'
-#mod 'cis_rhel7',
+mod 'cis_rhel7',
 #   :git => 'https://github.com/raj-andy1/cis_rhel7'
 mod 'gcloudsdk',
     :git => 'https://github.com/raj-andy1/gcloudsdk'

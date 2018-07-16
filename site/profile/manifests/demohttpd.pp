@@ -5,8 +5,8 @@ class profile::demohttpd
 
 {
   #include cis
-  #include cis_rhel7
-  include ::cis_benchmarks
+  include cis_rhel7
+  #include ::cis_benchmarks
   include arapache
 
   firewall { '1 allow http access':
@@ -15,6 +15,6 @@ class profile::demohttpd
   action => accept,
 }
 
-Class['cis_benchmarks'] -> Class['arapache'] -> Firewall['1 allow http access']
+Class['cis_rhel7'] -> Class['arapache'] -> Firewall['1 allow http access']
 
 }

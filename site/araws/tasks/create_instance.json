@@ -1,0 +1,61 @@
+{
+	"description": "Quickly create and AWS instance",
+	"supports_noop": false,
+	"input_method": "environment",
+	"parameters": {
+		"pe_master": {
+			"description": "Provide the FQDN/IP Address of the PE Master",
+			"type": "Optional[String[1]]"
+		},
+
+		"name": {
+			"description": "Provide the Name tag",
+			"type": "String[1]"
+		},
+
+		"region": {
+			"description": "The region (us-west-2, etc)",
+			"type": "String[1]"
+		},
+
+		"instance_type": {
+			"description": "Instance Type (t2.micro, etc)",
+			"type": "String[1]"
+		},
+
+		"image_id": {
+			"description": "AMI ID to use (eg: ami-e689729e)",
+			"type": "String[1]"
+		},
+
+		"subnets": {
+			"description": "Subnet to deploy into (uses default if none selected)",
+			"type": "Optional[String[1]]"
+		},
+
+		"security_groups": {
+			"description": "Security Groups (csv: agents,puppet)",
+			"type": "String[1]"
+		},
+
+		"key_name": {
+			"description": "Ssh Public Key to add to access the instance",
+			"type": "String[1]"
+		},
+
+		"iam_role": {
+			"description": "IAM role for the instance (uses default if none provided)",
+			"type": "Optional[String[1]]"
+		},
+
+		"pe_role": {
+			"description": "PE role for the instance (uses default if none provided)",
+			"type": "Optional[String[1]]"
+		},
+
+		"ensure": {
+			"description": "Ensure Running or Absent",
+			"type": "Optional[String[1]]"
+		}
+	}
+}

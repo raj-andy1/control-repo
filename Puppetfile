@@ -66,6 +66,8 @@ mod 'cis_rhel7',
     :git => 'https://github.com/raj-andy1/cis_rhel7'
 mod 'gcloudsdk',
     :git => 'https://github.com/raj-andy1/gcloudsdk'
+mod 'puppetlabs-bootstrap', '0.3.0',
+    :git => 'https://github.com/raj-andy1/puppetlabs-bootstrap'
 mod 'puppet-letsencrypt', '2.3.0'
 mod 'autostructure-harden_windows_server', '0.1.22'
 mod 'ayohrling-local_security_policy', '0.6.2'

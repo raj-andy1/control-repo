@@ -55,7 +55,7 @@
 
 		"ensure": {
 			"description": "Ensure Running or Absent",
-			"type": "Optional[String[1]]"
+			"type": "String[1]"
 		}
 	}
 }

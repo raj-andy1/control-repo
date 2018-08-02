@@ -41,9 +41,8 @@ class profile::mypythonapp (
   wsgi_daemon_process_options => {
     user => 'apache',
     group => 'apache',
-    processes    => '2',
     threads      => '15',
-    display-name => '%{GROUP}',
+    python-path => '/var/www/mypythonapp'
   },
   wsgi_import_script          => '/var/www/mypythonapp/pythonapp.wsgi',
   wsgi_process_group          => 'pythonapp',

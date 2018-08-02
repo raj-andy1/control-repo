@@ -18,11 +18,14 @@ class profile::mypythonapp (
   mode => '0755',
   owner => 'apache',
   group => 'apache',
+  } ->
+  vcsrepo {'/var/www/mypythonapp':
+  ensure => present,
+  provider => git,
+  source => 'git://github.com/raj-andy1/PythonApp.git',
+  require => Package['git'],
   }
 
-  vcsrepo{
-    
-  }
   class {'apache':
   default_vhost => false,
   }

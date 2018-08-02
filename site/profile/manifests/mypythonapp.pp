@@ -39,7 +39,7 @@ class profile::mypythonapp (
   
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':
   port => '80',
-  priority => '10'
+  priority => '10',
   wsgi_application_group      => '%{GLOBAL}',
   wsgi_daemon_process         => 'pythonapp',
   wsgi_daemon_process_options => {

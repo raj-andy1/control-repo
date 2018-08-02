@@ -30,7 +30,7 @@ class profile::mypythonapp (
   default_vhost => false,
   }
 
-  class { 'apache::mod::mod_wsgi':}
+  class {'apache::mod::mod_wsgi':}
 
   #apache::mod { 'mod_wsgi':}
   #apache::mod::mod_wsgi {}

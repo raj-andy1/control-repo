@@ -13,6 +13,16 @@ class profile::mypythonapp (
   package { 'wandisco-git': source => 'http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm'} ->
   package {'git':}
 
+  file {'/var/www/mypythonapp':
+  ensure => directory,
+  mode => '0755',
+  owner => 'apache',
+  group => 'apache',
+  }
+
+  vcsrepo{
+    
+  }
   class {'apache':
   default_vhost => false,
   }

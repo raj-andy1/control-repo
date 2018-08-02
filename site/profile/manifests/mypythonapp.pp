@@ -26,10 +26,6 @@ class profile::mypythonapp (
   require => Package['git'],
   }
 
-  class {'apache':
-  default_vhost => false,
-  }
-
   class {'apache::mod::wsgi':}
 
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':

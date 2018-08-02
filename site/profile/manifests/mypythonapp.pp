@@ -14,7 +14,7 @@ class profile::mypythonapp (
   package {'git':}
 
   class {'apache':
-  default_vhost => 'false',
+  default_vhost => false,
   }
 
   apache::mod { 'mod_wsgi':}

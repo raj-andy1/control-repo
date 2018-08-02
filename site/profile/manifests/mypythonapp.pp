@@ -10,7 +10,7 @@ class profile::mypythonapp (
   Package { ensure => 'installed'}
   package { $packages: } ->
   package { $pip_packages: provider => 'pip'}
-  package { 'wandisco-git': source => 'http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm'} ->
+  package { 'wandisco-git-release': source => 'http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm'} ->
   package {'git':}
 
   file {'/var/www/mypythonapp':

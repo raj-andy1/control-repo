@@ -46,7 +46,7 @@ class profile::mypythonapp (
     display-name => '%{GROUP}',
   },
   wsgi_import_script          => '/var/www/mypythonapp/pythonapp.wsgi',
-  wsgi_process_group          => 'wsgi',
+  wsgi_process_group          => 'pythonapp',
   wsgi_script_aliases         => { '/' => '/var/www/mypythonapp/pythonapp.wsgi' }
   }
 }

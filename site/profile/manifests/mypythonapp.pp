@@ -30,7 +30,10 @@ class profile::mypythonapp (
   default_vhost => false,
   }
 
-  apache::mod { 'mod_wsgi':}
+  class { 'apache::mod::mod_wsgi':}
+
+  #apache::mod { 'mod_wsgi':}
+  #apache::mod::mod_wsgi {}
 
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':
   port => '80',

@@ -2,13 +2,13 @@
 # Sample Puppet code to setup apache and other stuff for mypythonapp
 
 class profile::mypythonapp (
-  $packages = [],
+  $packages = ['python-pip'],
   $pip_packages = ['flask','flask-mysql']
 )
 
 {
   Package { ensure => 'installed'}
-  package { $packages: }
+  package { $packages: } ->
   package { $pip_packages: provider => 'pip'}
   package { 'wandisco-git': source => 'http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm'} ->
   package {'git':}

@@ -30,12 +30,16 @@ class profile::mypythonapp (
   mode => 'permissive',
   type => 'targeted',
   }
-
-  class {'apache::mod::wsgi':}
-
+  
+  class {'apache':
+  default_vhost => false,
+  } ->
+  
+  class {'apache::mod::wsgi':}->
+  
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':
   port => '80',
-  docroot => '/var/www/mypythonapp',
+  priority => '15'
   wsgi_application_group      => '%{GLOBAL}',
   wsgi_daemon_process         => 'pythonapp',
   wsgi_daemon_process_options => {

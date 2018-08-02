@@ -35,5 +35,17 @@ class profile::mypythonapp (
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':
   port => '80',
   docroot => '/var/www/mypythonapp',
+  wsgi_application_group      => '%{GLOBAL}',
+  wsgi_daemon_process         => 'pythonapp',
+  wsgi_daemon_process_options => {
+    user => 'apache',
+    group => 'apache',
+    processes    => '2',
+    threads      => '15',
+    display-name => '%{GROUP}',
+  },
+  wsgi_import_script          => '/var/www/mypythonapp/pythonapp.wsgi',
+  wsgi_process_group          => 'wsgi',
+  wsgi_script_aliases         => { '/' => '/var/www/mypythonapp/pythonapp.wsgi' }
   }
 }

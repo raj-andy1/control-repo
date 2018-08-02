@@ -26,6 +26,11 @@ class profile::mypythonapp (
   require => Package['git'],
   }
 
+  class {selinux:
+  mode => 'permissive',
+  type => 'targeted',
+  }
+
   class {'apache::mod::wsgi':}
 
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':

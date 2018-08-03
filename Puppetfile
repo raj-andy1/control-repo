@@ -72,3 +72,6 @@ mod 'jonono-auditpol', '0.1.2'
 mod 'puppetlabs-vcsrepo', '2.3.0'
 mod 'puppetlabs-bootstrap',
     :git => 'https://github.com/raj-andy1/puppetlabs-bootstrap'
+mod 'puppetlabs-docker', '2.0.0'
+mod 'puppetlabs-apt', '5.0.1'
+mod 'puppetlabs-translate', '1.1.0'

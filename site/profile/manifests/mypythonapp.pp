@@ -13,11 +13,6 @@ class profile::mypythonapp (
   package { 'wandisco-git-release': source => 'http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm'} ->
   package {'git':}
 
-  class {selinux:
-  mode => 'permissive',
-  type => 'targeted',
-  }
-
   file {'/var/www/mypythonapp':
   ensure => directory,
   mode => '0755',

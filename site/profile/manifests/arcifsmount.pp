@@ -6,10 +6,10 @@ class profile::arcifsmount (
   $mnt_passwd = 'Puppetlabs01',
 )
 
-{ 
+{
   package { 'cifs-utils':
     ensure => 'present'
-  } ->
+    } ->
 
 mount { '/ar':
 ensure => mounted,

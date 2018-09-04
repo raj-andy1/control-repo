@@ -28,7 +28,7 @@ class jenkins_setup {
   }
 
   ### Importing Jenkins repo, checking if repo was refreshed/downloaded again
-  exec { import_jenkins:
+  exec { 'import_jenkins':
     command     =>  '/bin/rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key',
     cwd         => '/root',
     creates     =>  '/etc/sysconfig/jenkins',
@@ -45,18 +45,18 @@ class jenkins_setup {
   ### Ensuring Jenkins config file is present for port config
   ### Require jenkins to be installed before ensuring presence of jenkins config file
   file {'/etc/sysconfig/jenkins':
-    ensure => file,
+    ensure  => file,
     require => Package['jenkins'],
   }
 
   ### Using inifile module from Puppet Forge
   ### Setting jenkins port number to 8000
   ini_setting { 'manage_jenkins_port':
-    ensure         => present,
-    path           => '/etc/sysconfig/jenkins',
-    setting        => 'JENKINS_PORT',
-    value          => '8000',
-    } 
+    ensure  => present,
+    path    => '/etc/sysconfig/jenkins',
+    setting => 'JENKINS_PORT',
+    value   => '8000',
+    }
 
   ### Ensuring Jenkins service is running
   ### Before running jenkins service, we require prerequisits to be done

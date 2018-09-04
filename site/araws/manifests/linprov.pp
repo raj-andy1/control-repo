@@ -19,21 +19,21 @@ class araws::linprov (
   )
   {
   ec2_instance { $inst_nm:
-    ensure            =>  present,
-    region            => $aws_region,
-    availability_zone => $avza,
-    image_id          =>  $img_id,
-    subnet            =>  $snet,
-    security_groups   =>  $secg,
-    instance_type     =>  $inst_type,
+    ensure                   =>  present,
+    region                   => $aws_region,
+    availability_zone        => $avza,
+    image_id                 =>  $img_id,
+    subnet                   =>  $snet,
+    security_groups          =>  $secg,
+    instance_type            =>  $inst_type,
     iam_instance_profile_arn => $iam_ip_arn,
-    user_data         => template('araws/linux_agent_pe_userdata.erb'),
-    key_name          => $key_nm,
-    tags              =>  {
+    user_data                => template('araws/linux_agent_pe_userdata.erb'),
+    key_name                 => $key_nm,
+    tags                     =>  {
         department => 'tse',
         project    => 'self-practice',
         created_by => 'andyr@puppet.com',
-        lifetime => '1w',
+        lifetime   => '1w',
       }
     }
     if $add_vol {

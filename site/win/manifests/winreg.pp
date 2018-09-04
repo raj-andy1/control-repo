@@ -5,13 +5,13 @@ class win::winreg {
   ensure  =>  present,
   }
   registry_value { 'HKLM\System\CurrentControlSet\Services\Puppet01\Description':
-  ensure  =>  present,
-  type  => string,
-  data => 'some junk data',
+  ensure =>  present,
+  type   => string,
+  data   => 'some junk data',
   }
 
   registry::value { 'Description':
-  key =>  'HKLM\System\CurrentControlSet\Services\Puppet02',
+  key  =>  'HKLM\System\CurrentControlSet\Services\Puppet02',
   data => 'Yahoo101',
 }
 }

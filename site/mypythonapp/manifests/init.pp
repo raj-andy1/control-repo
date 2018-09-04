@@ -15,9 +15,9 @@ class mypythonapp (
 
   file {'/var/www/mypythonapp':
   ensure => directory,
-  mode => '0755',
-  owner => 'apache',
-  group => 'apache',
+  mode   => '0755',
+  owner  => 'apache',
+  group  => 'apache',
   } ->
   vcsrepo {'/var/www/mypythonapp':
   ensure => present,
@@ -25,13 +25,13 @@ class mypythonapp (
   source => 'git://github.com/raj-andy1/PythonApp.git',
   require => Package['git'],
   }
-  
+
   class {'apache':
   default_vhost => false,
   }
-  
+
   class {'apache::mod::wsgi':}
-  
+
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':
   port => '80',
   priority => '10',

@@ -5,8 +5,8 @@ class araws::destroy (
   $aws_instance_name = 'Andy R Testing Agent - 13',
   )
 {
-  ec2_instance { "$aws_instance_name":
-    region  =>  $araws::provision::aws_region,
-    ensure  => absent,
+  ec2_instance { "$ {aws_instance_name}":
+    ensure => absent,
+    region =>  $araws::provision::aws_region,
   }
 }

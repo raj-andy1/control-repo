@@ -7,9 +7,9 @@ class win::winprep {
     ensure   => latest,
     provider => 'chocolatey',
   }
-  
-  package {"Firefox":
-  ensure => installed,
+
+  package {'Firefox':
+  ensure   => installed,
   provider => 'chocolatey',
   }
 

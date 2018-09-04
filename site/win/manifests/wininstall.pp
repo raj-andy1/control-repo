@@ -2,12 +2,12 @@
 # Sample code that installs software from Chocolatey
 class win::wininstall {
   package {'notepadplusplus':
-    ensure  =>  latest,
-    provider  =>  'chocolatey',
+    ensure   =>  latest,
+    provider =>  'chocolatey',
   }
 
   package {'vlc':
-    ensure => '2.2.0',
-    provider  =>  'chocolatey',
+    ensure   => '2.2.0',
+    provider =>  'chocolatey',
   }
 }

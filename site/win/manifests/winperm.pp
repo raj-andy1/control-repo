@@ -2,11 +2,11 @@
 # Sample code to set NTFS permissions on test objects
 class win::winperm {
   acl { 'C:\Users\Administrator\Pictures\collage.png':
-  target  =>  'C:\Users\Administrator\Pictures\collage.png',
-  permissions =>  [
-    { identity  =>  'testuser01', rights  =>  ['write','execute'], perm_type =>  'deny' },
-    { identity  =>  'testgroup01', rights  =>  ['write','execute'], perm_type =>  'allow' },
+  target                     =>  'C:\Users\Administrator\Pictures\collage.png',
+  permissions                =>  [
+    { identity =>  'testuser01', rights  =>  ['write','execute'], perm_type =>  'deny' },
+    { identity =>  'testgroup01', rights  =>  ['write','execute'], perm_type =>  'allow' },
   ],
-    inherit_parent_permissions  =>  false,
+  inherit_parent_permissions =>  false,
   }
 }

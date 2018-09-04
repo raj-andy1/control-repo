@@ -8,8 +8,8 @@ class windemo::uc8 {
 
   }
   package {'Notepad++ (64-bit x64)':
-  ensure => installed,
-  source => 'C:\Windows\Temp\npp.7.5.5.Installer.x64.exe',
+  ensure          => installed,
+  source          => 'C:\Windows\Temp\npp.7.5.5.Installer.x64.exe',
   install_options => ['/S'],
   }
 }

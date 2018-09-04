@@ -25,13 +25,13 @@ class profile::mypythonapp (
   source => 'git://github.com/raj-andy1/PythonApp.git',
   require => Package['git'],
   }
-  
+
   class {'apache':
   default_vhost => false,
   }
-  
+
   class {'apache::mod::wsgi':}
-  
+
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':
   port => '80',
   priority => '10',

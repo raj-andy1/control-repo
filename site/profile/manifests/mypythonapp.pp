@@ -15,15 +15,15 @@ class profile::mypythonapp (
 
   file {'/var/www/mypythonapp':
   ensure => directory,
-  mode => '0755',
-  owner => 'apache',
-  group => 'apache',
+  mode   => '0755',
+  owner  => 'apache',
+  group  => 'apache',
   } ->
   vcsrepo {'/var/www/mypythonapp':
-  ensure => present,
+  ensure   => present,
   provider => git,
-  source => 'git://github.com/raj-andy1/PythonApp.git',
-  require => Package['git'],
+  source   => 'git://github.com/raj-andy1/PythonApp.git',
+  require  => Package['git'],
   }
 
   class {'apache':
@@ -33,9 +33,9 @@ class profile::mypythonapp (
   class {'apache::mod::wsgi':}
 
   apache::vhost {'mypythonapp.ar-gcp.tsedemos.com':
-  port => '80',
-  priority => '10',
-  docroot => '/var/www/mypythonapp',
+  port                        => '80',
+  priority                    => '10',
+  docroot                     => '/var/www/mypythonapp',
   wsgi_application_group      => '%{GLOBAL}',
   wsgi_daemon_process         => 'pythonapp',
   wsgi_daemon_process_options => {
